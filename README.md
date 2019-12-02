@@ -1,5 +1,7 @@
 # Utrust Developers Page
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/79dd4173-485f-41ed-bc18-e75cbeaca004/deploy-status)](https://app.netlify.com/sites/jolly-keller-612a14/deploys)
+
 This page is build with [ReDoc](https://github.com/Redocly/redoc) to have consistent styling between the Developers page and the API Reference.
 
 ### Install
