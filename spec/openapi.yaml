@@ -1,249 +1,78 @@
-# This is an **example** API to demonstrate features of OpenAPI specification.
-# It doesn't cover all OpenAPI features. For more full example check out: https://github.com/APIs-guru/petstore_extended
-
 openapi: 3.0.0
 info:
-  version: '1.0.0' # Your API version
-  # It can be any string but it is better to use semantic versioning: http://semver.org/
-  # Warning: OpenAPI require version to be string, but without quotation YAML can recognize it as number.
-  
-  title: Example.com # Replace with your API title
-  # Keep it simple. Don't add "API" or version at the end of the string.
-
-  termsOfService: 'https://example.com/terms/' # [Optional] Replace with an URL to your ToS
-  contact:
-    email: contact@example.com # [Optional] Replace with your contact email
-    url: 'http://example.com/contact' # [Optional] Replace with link to your contact form
-  license:
-    name: Apache 2.0
-    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   x-logo:
-    url: 'https://apis.guru/openapi-template/logo.png'
-  
-  # Describe your API here, you can use GFM (https://guides.github.com/features/mastering-markdown) here
+    url: "https://user-images.githubusercontent.com/1558992/69666315-f6775f80-1083-11ea-8482-3fa2a9e64de3.png"
+    backgroundColor: "#5b47ff"
+  title: Developers
   description: |
-    This is an **example** API to demonstrate features of OpenAPI specification
+    Accept crypto payments in your online store or website, easily with Utrust. 
+    This is the place where you can find all the tools to integrate Utrust Payment method in your store or website.
+
     # Introduction
-    This specification is intended to to be a good starting point for describing your API in 
-    [OpenAPI/Swagger format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md).
-    It also demonstrates features of [generator-openapi-repo](https://github.com/Rebilly/generator-openapi-repo) tool and 
-    [ReDoc](https://github.com/Rebilly/ReDoc) documentation engine. So beyond the standard OpenAPI syntax we use a few 
-    [vendor extensions](https://github.com/Rebilly/ReDoc/blob/master/docs/redoc-vendor-extensions.md).
 
-    # OpenAPI Specification
-    The goal of The OpenAPI Specification is to define a standard, language-agnostic interface to REST APIs which
-    allows both humans and computers to discover and understand the capabilities of the service without access to source
-    code, documentation, or through network traffic inspection. When properly defined via OpenAPI, a consumer can 
-    understand and interact with the remote service with a minimal amount of implementation logic. Similar to what
-    interfaces have done for lower-level programming, OpenAPI removes the guesswork in calling the service.
-externalDocs:
-  description: Find out how to create Github repo for your OpenAPI spec.
-  url: 'https://github.com/Rebilly/generator-openapi-repo'
+    Our payment flow is asynchronous: the buyer has 15 minutes to choose the cryptocurrency and pay by sending the funds to the address we provide. 
+    Then we confirm the transaction and send a notification to the merchant via a webhook (up to 2 hours). 
+    This is different from a synchronous credit card payment.
 
-# A list of tags used by the specification with additional metadata.
-# The order of the tags can be used to reflect on their order by the parsing tools.
-tags:
-  - name: Echo
-    description: Example echo operations
-  - name: User
-    description: Operations about user
-servers:
-  - url: 'http://example.com/api/v1'
-  - url: 'https://example.com/api/v1'
+    ## Checkout timeline
 
-# Holds the relative paths to the individual endpoints. The path is appended to the
-# basePath in order to construct the full URL. 
-paths:
-  '/users/{username}': # path parameter in curly braces
+    What customer sees and doesn't see has 7 stages:
 
-    # parameters list that are used with each operation for this path
-    parameters:
-      - name: pretty_print
-        in: query
-        description: Pretty print response
-        schema:
-          type: boolean
-    get: # documentation for GET operation for this path
-      tags:
-        - User
-      
-      # summary is up to 120 symbold but we recommend to be shortest as possible
-      summary: Get user by user name
-      
-      # you can use GFM in operation description too: https://guides.github.com/features/mastering-markdown
-      description: |
-        Some description of the operation. 
-        You can use `markdown` here.
-      
-      # operationId should be unique across the whole specification
-      operationId: getUserByName
-      
-      # list of parameters for the operation
-      parameters:
-        - name: username
-          in: path
-          description: The name that needs to be fetched
-          required: true
-          schema:
-            type: string
-        - name: with_email
-          in: query
-          description: Filter users without email
-          schema:
-            type: boolean
-      
-      # security schemas applied to this operation
-      security:
-        - main_auth:
-            - 'read:users' # for auth2 provide list of scopes here
-        - api_key: []
-      responses: # list of responses
-        '200':
-          description: Success
-          content:
-            application/json: # operation response mime type
-              schema: # response schema can be specified for each response
-                $ref: '#/components/schemas/User'
-              example: # response example
-                username: user1
-                email: user@example.com
-        '403':
-          description: Forbidden
-        '404':
-          description: User not found
-    # documentation for PUT operation for this path
-    put:
-      tags:
-        - User
-      summary: Updated user
-      description: This can only be done by the logged in user.
-      operationId: updateUser
-      parameters:
-        - name: username
-          in: path
-          description: The name that needs to be updated
-          required: true
-          schema:
-            type: string
-      security:
-        - main_auth:
-            - 'write:users'
-      responses:
-        '200':
-          description: OK
-        '400':
-          description: Invalid user supplied
-        '404':
-          description: User not found
-      # request body documentation
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/User'
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/User'
-        description: Updated user object
-        required: true
-  /echo: # path parameter in curly braces
-    post: # documentation for POST operation for this path
-      tags:
-        - Echo
-      summary: Echo test
-      description: Receive the exact message you've sent
-      operationId: echo
-      security:
-        - api_key: []
-        - basic_auth: []
-      responses:
-        '200':
-          description: OK
-          # document headers for this response
-          headers:
-            X-Rate-Limit: # Header name
-              description: calls per hour allowed by the user
-              schema: # Header schema
-                type: integer
-                format: int32
-            X-Expires-After:
-              $ref: '#/components/headers/ExpiresAfter'
-          content:
-            application/json:
-              schema:
-                type: string
-              examples:
-                response:
-                  value: Hello world!
-            application/xml:
-              schema:
-                type: string
-            text/csv:
-              schema:
-                type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: string
-              example: Hello world!
-          application/xml:
-            schema:
-              type: string
-              example: Hello world!
-        description: Echo payload
-        required: true
-        
-# An object to hold reusable parts that can be used across the spec
-components:
-  schemas:
-    Email:
-      description: User email address
-      type: string
-      format: test
-      example: john.smith@example.com
-    User:
-      type: object
-      properties:
-        username:
-          description: User supplied username
-          type: string
-          minLength: 4
-          example: John78
-        firstName:
-          description: User first name
-          type: string
-          minLength: 1
-          example: John
-        lastName:
-          description: User last name
-          type: string
-          minLength: 1
-          example: Smith
-        email:
-          $ref: '#/components/schemas/Email'
-  headers:
-    ExpiresAfter:
-      description: date in UTC when token expires
-      schema:
-        type: string
-        format: date-time
-  # Security scheme definitions that can be used across the specification.
-  securitySchemes:
-    main_auth: # security definition name (you can name it as you want)
-      # the following options are specific to oauth2 type
-      type: oauth2 # authorization type, one of: oauth2, apiKey, http
-      flows:
-        implicit:
-          authorizationUrl: 'http://example.com/api/oauth/dialog'
-          scopes:
-            'read:users': read users info
-            'write:users': modify or remove users
-    api_key:  # security definition name (you can name it as you want)
-      type: apiKey 
-      # The following options are specific to apiKey type
-      in: header # Where API key will be passed: header or query
-      name: api_key # API key parameter name
-    basic_auth: # security definition name (you can name it as you want)
-      type: http
-      scheme: basic
+    ![Checkout_process_diagram](https://user-images.githubusercontent.com/1558992/69982001-57db7a80-152b-11ea-89b0-b6acb629b7a3.png)
+
+    1. [**Store**] On checkout, the customer creates the order. The store server gets the  `redirect_url` on the HTTP response to the endpoint **[/stores/orders](https://docs.api.utrust.com/#operation/createOrder)**.
+    2. [**Store**] Redirects the customer to the UTRUST Payment widget.
+    3. [**Utrust**] The customer pays the order and sees "Payment Complete" message. Utrust also sends the customer an email with the payment proof. Payment is only detected at this stage, Utrust still needs to confirm it, but everything is completed on the customer side.
+    4. [**Utrust**] Redirects the customer back to the store (`return_url`).
+    5. [**Store**] Shows "Thank you for your order" page.
+    6. [**Utrust**] Depending on the cryptocurrency chosen, it might take some minutes or even hours (Bitcoin) to confirm the transaction on the blockchain. Once confirmed, Utrust sends an HTTP request to the Store server with the event type `ORDER.PAYMENT.RECEIVED`.
+    7. [**Store**] Verifies and validates the signature in the HTTP request body (using the `webhooks secret` to decode it) and, if valid, changes the Order state to "Paid" (our to whatever your CMS wants as a next state). The Store usually also sends the email with the invoice to the customer at this stage.
+
+    # Guides
+
+    ## Try a Payment
+
+    The best way to learn about what we do is testing it. For this you should prepare an external wallet with test money. 
+    Our payment method accepts any external wallet but for testing we recommend using [MetaMask](https://https://metamask.io/), an Ethereum wallet. 
+    For the test mode, you need to change to the Ropsten Test Network:
+
+
+
+
+    ## Webhook
+
+
+
+    # Integrations
+
+    Utrust provides the following plugins for you to start accepting cryptocurrencies
+
+    ## Magento 1
+    Start accepting cryptocurrencies in your Magento 1 store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-magento1).
+
+    ## Magento 2
+    Start accepting cryptocurrencies in your Magento 2 store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-magento2).
+
+    ## PrestaShop
+    Start accepting cryptocurrencies in your PrestaShop store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-prestashop).
+
+    ## WooCommerce
+    Start accepting cryptocurrencies in your WooCommerce store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-woocommerce).
+
+    # Libraries
+
+    ## PHP
+
+    We've put in place a simple PHP library to get you started easily with the core functionalities of our payment method. Available via composer:
+    ```
+    composer require utrust/utrust
+    ```
+    Check the code hosted on [GitHub](https://github.com/utrustdev/utrust-php).
+
+    # APIs 
+
+    Utrust provides two API's for your use: Stores API and Merchants API.
+
+    [Utrust API Reference →](https://docs.api.utrust.com)
+
+paths: false

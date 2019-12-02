@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>API Reference | ReDoc</title>
+    <title>Utrust Developers</title>
     <!-- needed for adaptive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- needed for adaptive design -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700"
+      rel="stylesheet"
+    />
 
     <!--
     ReDoc uses font options from the parent element
@@ -16,9 +24,27 @@
         padding: 0;
       }
     </style>
-    {{redocHead}}
   </head>
   <body>
-    {{redocBody}}
+    <div id="redoc-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/redoc/bundles/redoc.standalone.js"></script>
+    <script>
+      const options = {
+        disableSearch: true,
+        hideDownloadButton: true,
+        theme: { colors: { primary: { main: "#5b47ff" } } }
+      };
+
+      const callback = () => {
+        console.log("rendered!");
+      };
+
+      Redoc.init(
+        "openapi.yaml",
+        options,
+        document.getElementById("redoc-container"),
+        callback
+      );
+    </script>
   </body>
 </html>

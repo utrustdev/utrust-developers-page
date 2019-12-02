@@ -1,7 +1,7 @@
-# Utrust Developers OpenAPI Specification
+# Utrust Developers Page
 
+This page is build with [ReDoc](https://github.com/Redocly/redoc) to have consistent styling between the Developers page and the API Reference.
 
-## Working on specification
 ### Install
 
 1. Install [Node JS](https://nodejs.org/)
@@ -10,13 +10,13 @@
 ### Usage
 
 #### `npm start`
+
 Starts the development server.
 
 #### `npm run build`
-Bundles the spec and prepares web_deploy folder with static assets.
 
-#### `npm test`
-Validates the spec.
+Bundles the spec and prepares `build` folder with static assets.
 
-#### `npm run gh-pages`
-Deploys docs to GitHub Pages. You don't need to run it manually if you have Travis CI configured.
+### Deploy
+
+The project is hosted on Netlify, deploys are automatic to `https://docs.utrust.com` when merged to `master`.

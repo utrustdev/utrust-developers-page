@@ -7,8 +7,7 @@
   "private": true,
   "scripts": {
     "start": "swagger-repo serve",
-    "build": "swagger-repo build -o web_deploy",
-    "test": "swagger-repo validate",
-    "gh-pages": "swagger-repo gh-pages"
+    "build": "swagger-repo build -o build",
+    "test": "swagger-repo validate"
   }
 }

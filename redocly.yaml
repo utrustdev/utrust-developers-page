@@ -1,7 +1,6 @@
-
 apiTitle: Utrust Developers
 splitSpec: false
-codeSamples: true
-swaggerUI: true
+codeSamples: false
+swaggerUI: false
 travis: false
 oasVersion: 3.0.0
