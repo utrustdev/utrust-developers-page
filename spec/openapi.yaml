@@ -10,11 +10,13 @@ info:
 
     # Introduction
 
+    In this section you can find a set of concepts so that you can be able to do a proper integration of our payment method.
+
+    ## Checkout process
+
     Our payment flow is asynchronous: the buyer has 15 minutes to choose the cryptocurrency and pay by sending the funds to the address we provide. 
     Then we confirm the transaction and send a notification to the merchant via a webhook (up to 2 hours). 
     This is different from a synchronous credit card payment.
-
-    ## Checkout process
 
     What customer sees and doesn't see has 7 stages:
 
@@ -31,8 +33,6 @@ info:
     7. [**Store**] Verifies and validates the signature in the HTTP request body (using the `webhooks secret` to decode it) and, if valid, changes the Order state to "Paid" (our to whatever your CMS wants as a next state). 
     The Store usually also sends the email with the invoice to the customer at this stage.
 
-    # Guides
-
     ## Try a Payment
 
     The best way to learn about what we do is testing it. For this you should prepare an external wallet with test money. 
@@ -45,6 +45,10 @@ info:
 
     ## Webhook
 
+    You might want to update the status of your Order when we receive the payment automatically. For that, we use webhooks to send you that information. 
+    This events need to be validated so that you are sure they are real and coming from Utrust, that's for what the `webhooks secret` is for.
+    Our [integrations](#section/Integrations) do this automatically or you can use our [libraries](#section/Libraries) to verify the payload signature.
+    Please check the instructions on how this works on our [API Reference Webhooks](https://docs.api.utrust.com/#tag/Webhooks) section. 
 
 
     # Integrations
