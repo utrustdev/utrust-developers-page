@@ -28,23 +28,6 @@
   <body>
     <div id="redoc-container"></div>
     <script src="https://cdn.jsdelivr.net/npm/redoc/bundles/redoc.standalone.js"></script>
-    <script>
-      const options = {
-        disableSearch: true,
-        hideDownloadButton: true,
-        theme: { colors: { primary: { main: "#5b47ff" } } }
-      };
-
-      const callback = () => {
-        console.log("rendered!");
-      };
-
-      Redoc.init(
-        "openapi.yaml",
-        options,
-        document.getElementById("redoc-container"),
-        callback
-      );
-    </script>
+    <script src="redoc.js"></script>
   </body>
 </html>

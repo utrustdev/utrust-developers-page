@@ -14,19 +14,22 @@ info:
     Then we confirm the transaction and send a notification to the merchant via a webhook (up to 2 hours). 
     This is different from a synchronous credit card payment.
 
-    ## Checkout timeline
+    ## Checkout process
 
     What customer sees and doesn't see has 7 stages:
 
     ![Checkout_process_diagram](https://user-images.githubusercontent.com/1558992/69982001-57db7a80-152b-11ea-89b0-b6acb629b7a3.png)
 
-    1. [**Store**] On checkout, the customer creates the order. The store server gets the  `redirect_url` on the HTTP response to the endpoint **[/stores/orders](https://docs.api.utrust.com/#operation/createOrder)**.
+    1. [**Store**] On checkout, the customer creates the order. The store server gets the `redirect_url` on the HTTP response to the endpoint **[/stores/orders](https://docs.api.utrust.com/#operation/createOrder)**.
     2. [**Store**] Redirects the customer to the UTRUST Payment widget.
-    3. [**Utrust**] The customer pays the order and sees "Payment Complete" message. Utrust also sends the customer an email with the payment proof. Payment is only detected at this stage, Utrust still needs to confirm it, but everything is completed on the customer side.
+    3. [**Utrust**] The customer pays the order and sees "Payment Complete" message. Utrust also sends the customer an email with the payment proof. Payment is only detected at this stage, Utrust still needs to confirm it, 
+    but everything is completed on the customer side.
     4. [**Utrust**] Redirects the customer back to the store (`return_url`).
     5. [**Store**] Shows "Thank you for your order" page.
-    6. [**Utrust**] Depending on the cryptocurrency chosen, it might take some minutes or even hours (Bitcoin) to confirm the transaction on the blockchain. Once confirmed, Utrust sends an HTTP request to the Store server with the event type `ORDER.PAYMENT.RECEIVED`.
-    7. [**Store**] Verifies and validates the signature in the HTTP request body (using the `webhooks secret` to decode it) and, if valid, changes the Order state to "Paid" (our to whatever your CMS wants as a next state). The Store usually also sends the email with the invoice to the customer at this stage.
+    6. [**Utrust**] Depending on the cryptocurrency chosen, it might take some minutes or even hours (Bitcoin) to confirm the transaction on the blockchain. Once confirmed, Utrust sends an HTTP request to the Store server 
+    with the event type `ORDER.PAYMENT.RECEIVED`.
+    7. [**Store**] Verifies and validates the signature in the HTTP request body (using the `webhooks secret` to decode it) and, if valid, changes the Order state to "Paid" (our to whatever your CMS wants as a next state). 
+    The Store usually also sends the email with the invoice to the customer at this stage.
 
     # Guides
 
@@ -34,7 +37,8 @@ info:
 
     The best way to learn about what we do is testing it. For this you should prepare an external wallet with test money. 
     Our payment method accepts any external wallet but for testing we recommend using [MetaMask](https://https://metamask.io/), an Ethereum wallet. 
-    For the test mode, you need to change to the Ropsten Test Network:
+    After installing, you need to change to the Ropsten Test Network for testing with our sandbox environment:
+
 
 
 
