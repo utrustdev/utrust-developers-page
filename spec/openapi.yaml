@@ -8,11 +8,11 @@ info:
     Accept crypto payments in your online store or website, easily with Utrust. 
     This is the place where you can find all the tools to integrate Utrust Payment method in your store or website.
 
-    # Introduction
+    # Basics
 
     In this section you can find a set of concepts so that you can be able to do a proper integration of our payment method.
 
-    ## Checkout process
+    ## 1. Checkout process
 
     Our payment flow is asynchronous: the buyer has 15 minutes to choose the cryptocurrency and pay by sending the funds to the address we provide. 
     Then we confirm the transaction and send a notification to the merchant via a webhook (up to 2 hours). 
@@ -33,23 +33,109 @@ info:
     7. [**Store**] Verifies and validates the signature in the HTTP request body (using the `webhooks secret` to decode it) and, if valid, changes the Order state to "Paid" (our to whatever your CMS wants as a next state). 
     The Store usually also sends the email with the invoice to the customer at this stage.
 
-    ## Try a Payment
+    ## 2. Try our flow
 
     The best way to learn about what we do is testing it. For this you should prepare an external wallet with test money. 
     Our payment method accepts any external wallet but for testing we recommend using [MetaMask](https://https://metamask.io/), an Ethereum wallet. 
     After installing, you need to change to the Ropsten Test Network for testing with our sandbox environment:
 
+    ![MetaMask_wallet](https://lh5.googleusercontent.com/5JE4WZ-VGoqxIcSZ_fh5JSLwBpvDX2KBqVrxeEz_Cbjp1RdWUGQ7l5j8Ht1LwN-lXJqJEI-buS33eLlhQ0OEv5hQKgmNWoM1JEf_DJWcLNUXR3_NjfLbk5_1nCWFqALMlp-c2utN)
 
+    Once you have it, go to our [sandbox store](https://sandbox.store.utrust.com) to try it!
+    Select an item and proceed to checkout. You will see Utrust payment method, select it.
+    Once you proceed to the payment, you will see our Payment Widget which should look like this:
 
+    ![Utrust_payment_widget_on_sandbox_store](https://lh4.googleusercontent.com/OwJl2McnvNGKC3EWWhkQYXUCLu7bmp_qREkTGg9qh9N2X0Wsle3cFCbccOWzw6Zk4i0OhfF0MzpRpaJDZL0ZDUVux5hpnrz_sqEYvRi_7VQigfBgZqM-fc8DSbX3PlBG-ptM9X2G)
 
+    By choosing the currency, you’ll access to the address and amount (choose Manual):
 
-    ## Webhook
+    ![Utrust_payment_widget_awaiting](https://lh6.googleusercontent.com/MCRm5bRcNBy5ddzqZOkx5omRkxg50hFCQqKOWXICr7OjiiWha2V22YZy0BLBkwpbZ0YhmIiau6Fi8fc3fa-25sB2pBW4Z2eW0OhxdAwsn4pT9xS9DsBaQSr5bT3STeiwPooaBXFI)
+
+    Afterwards, input those into MetaMask to fulfill the payment:
+
+    ![https://lh5.googleusercontent.com/LJa2DKFYFptnoJMsSga6UDNxSG_OpsOjtUGtCtDKR212TdjapunbB1OWgY2X54VmggLJkVmEisEibCeRk8Rkr7zy7ui36xmo-VBBEvp8Cjwuj1_5mtS5g6xV_53AMNzpW7KefVPy](https://lh5.googleusercontent.com/LJa2DKFYFptnoJMsSga6UDNxSG_OpsOjtUGtCtDKR212TdjapunbB1OWgY2X54VmggLJkVmEisEibCeRk8Rkr7zy7ui36xmo-VBBEvp8Cjwuj1_5mtS5g6xV_53AMNzpW7KefVPy)
+
+    After a short time the payment should be completed and you should see this page:
+
+    ![https://lh4.googleusercontent.com/DUay-Hpbwsf3-dROkK2F0q946F5FDshNzTApo0jUPud2OR7oShhmhbV_gbPo9gCS2N8dWzoRx7FKOxyqrVb07jiETwYPa-zaCXZq5gh_jRQpo4zbZHW-Ibsp18k2suKg4iXxFOYp](https://lh4.googleusercontent.com/DUay-Hpbwsf3-dROkK2F0q946F5FDshNzTApo0jUPud2OR7oShhmhbV_gbPo9gCS2N8dWzoRx7FKOxyqrVb07jiETwYPa-zaCXZq5gh_jRQpo4zbZHW-Ibsp18k2suKg4iXxFOYp)
+
+    This is not a payment confirmation yet, but it is a good indication that the payment will go through. However, only when we have a real confirmation will we send you the notifications, via [webhook](#section/Basics/4.-Webhook). 
+    For example, if the buyer selected Ethereum, it can take around 5-10 mins. 
+
+    ## 3. Build the order
+
+    Now that you understand the flow and tried it, let's build it!
+
+    ### **Sandbox vs. Production**
+
+    To distinguish between sandbox and production environments we have “**sandbox-utrust.com**” and “**utrust.com**” domains, respectively. All the endpoints should use the respective domain for the environment that you wish to work on.
+    To create a `sandbox` account for testing [go here](https://merchants.sandbox-utrust.com/).
+    To create a `production` account [go here](https://merchants.utrust.com/).
+
+    You can sign up in production, but your account needs to be revised and enabled by the Utrust team. Nevertheless, feel free to test the sandbox and get the integration fully ready.
+
+    ### **Sign up on Sandbox**
+
+    First you need a Merchant account on our testing environment (sandbox), [follow this link](https://merchants.sandbox-utrust.com/onboarding/sign-up).
+    Fill the form and there you go! You should have access.
+    ![https://lh5.googleusercontent.com/8kHwTkyNVPLffHz7YXs8e8AkjBi9CaVpZILeZyu7UfgpdC54_hGwd4dHhS3VWlwwL8iDL6FnQ7k9suvNPLOr8_ERutHf8DUdBWoZm5CsOSfpeRc5nMzti0S4qzJv2LWYYLLf8sLK](https://lh5.googleusercontent.com/8kHwTkyNVPLffHz7YXs8e8AkjBi9CaVpZILeZyu7UfgpdC54_hGwd4dHhS3VWlwwL8iDL6FnQ7k9suvNPLOr8_ERutHf8DUdBWoZm5CsOSfpeRc5nMzti0S4qzJv2LWYYLLf8sLK)
+
+    If you need to add more users, please let us know and we will add them manually to the same Organization.
+
+    ### **Authentication**
+
+    You’ll receive an email with the information needed in order to access it. After that, the first thing you need is to generate credentials for your store, which can be done in the Utrust Merchant Dashboard. Once inside, go to the Organization Settings section and click on the “Generate Credentials” button:
+
+    ![https://lh4.googleusercontent.com/MSRtlHQ8wou0b3-SGOLDgx7cizPiXoVNwCZpE1zMFrtR_1i8Mh1Vz6MA8elRhYmgR3RowoMJnL0FpYviyN7buUxez_xDoZm8yIUiqLfcMLkhYD4SSbevbrPWNqPKmVPj5m-BBZMb](https://lh4.googleusercontent.com/MSRtlHQ8wou0b3-SGOLDgx7cizPiXoVNwCZpE1zMFrtR_1i8Mh1Vz6MA8elRhYmgR3RowoMJnL0FpYviyN7buUxez_xDoZm8yIUiqLfcMLkhYD4SSbevbrPWNqPKmVPj5m-BBZMb)
+
+    You’ll then be prompted with the `api key` and `webhooks secret` for your store. Save this information somewhere, as you won’t be able to access it again (you can, of course, generate new credentials).
+
+    ![https://lh4.googleusercontent.com/EVgweG5O8wwO8aGk4woHaRVU-cg4TqpizsqQDlEcwehtCgQ4qAFcVVz5jSHhWeNIWIznbbhewkTFQOogyrPnkJWC0MUGgtUlS4t22otUBX0sASunQSE7Kryo7pB1cen9keGKrpum](https://lh4.googleusercontent.com/EVgweG5O8wwO8aGk4woHaRVU-cg4TqpizsqQDlEcwehtCgQ4qAFcVVz5jSHhWeNIWIznbbhewkTFQOogyrPnkJWC0MUGgtUlS4t22otUBX0sASunQSE7Kryo7pB1cen9keGKrpum)
+
+    ### **Creating the order**
+
+    Once you have all the information needed from a buyer and all that’s missing is paying, you can inform us of that by calling the **[create order endpoint](https://docs.api.utrust.com/#operation/createOrder)**. Don't forget to add the `api key` on the headers (as a Bearer token).
+    The response is a URL to which you should redirect the buyer, on success we will redirect them to the return_url and on failure to the cancel_url (if present).
+
+    ### Add the Utrust method option on Checkout
+
+    When listing our payment method in your store, you can use [these assets](#section/Basics/5.-Assets).
+
+    ## 4. Webhook
 
     You might want to update the status of your Order when we receive the payment automatically. For that, we use webhooks to send you that information. 
     This events need to be validated so that you are sure they are real and coming from Utrust, that's for what the `webhooks secret` is for.
-    Our [integrations](#section/Integrations) do this automatically or you can use our [libraries](#section/Libraries) to verify the payload signature.
-    Please check the instructions on how this works on our [API Reference Webhooks](https://docs.api.utrust.com/#tag/Webhooks) section. 
+    Our [integrations](#section/Integrations) do this automatically or you can use our [libraries](#section/Libraries) to verify the payload signature or manually using the instructions in our [API Reference Webhooks](https://docs.api.utrust.com/#tag/Webhooks) section. 
 
+    ### Being notified of payment confirmation
+
+    After the transaction is confirmed, we will send an HTTP POST request to whatever you specified as `callback_url` when creating the order, letting you know that a payment has been confirmed. All the information about being ready for these requests (and validating them) are explained also on the [**create order endpoint](https://docs.api.utrust.com/#operation/createOrder).**
+
+    You will need to get ready for the following steps:
+
+    1. Setting up a webhook on the endpoint you defined as `callback_url`;
+    2. Check if the signature is valid (code example [here on "Verifying events"](https://docs.api.utrust.com/#tag/Webhooks));
+    3. If is valid, check the `event_type`, it can be:
+    a. If it's `ORDER.PAYMENT.RECEIVED` → you should change the Order to `paid` or whatever you have as the next step in your orders process;
+
+        b. If it's `ORDER.PAYMENT.CANCELLED` → you should change the Order to `cancelled`;
+
+    4. Then you need to reply our request:
+
+        a. If everything went well → status: **200 OK**; with no body or a valid JSON (e.g. `{ success: true }`);
+
+        b. If something went wrong → status: **500 Internal Server Error**;
+
+    This way we know what happened on your server and we can stop retrying to send the webhook. We will do it once a minute for 10 minutes. 
+
+    ### Being notified of payment cancelled or failed
+
+    The process is that same as above, just the event type is different. Check all the different event types on our [API Reference Webhooks](https://docs.api.utrust.com/#tag/Webhooks).
+
+    ## 5. Assets
+
+    You might need our logo for listing it on the payment methods options and your website footer. The following kit should provide you with the necessary options for that: 
+    [Utrust_Merchant_kit.zip](https://github.com/utrustdev/utrust-developers-page/files/3917494/Utrust.merchant.kit.v2.zip)
 
     # Integrations
 
