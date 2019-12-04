@@ -1,3 +1,4 @@
+// To change the theme, check this structure at ReDoc: https://github.com/Redocly/redoc/blob/master/src/theme.ts
 const options = {
   disableSearch: true,
   hideDownloadButton: true,
