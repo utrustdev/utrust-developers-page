@@ -3,7 +3,7 @@ info:
   x-logo:
     backgroundColor: "#FAFAFA"
     url: "https://user-images.githubusercontent.com/1558992/70169428-b2f3a580-16c2-11ea-90a9-12ef570d046b.png"
-  title: Developers
+  title: Docs for Developers
   description: |
     Accept crypto payments in your online store or website, easily with Utrust. 
     This is the place where you can find all the tools to integrate Utrust Payment method in your store or website.
@@ -157,8 +157,6 @@ info:
     [Utrust_Merchant_kit.zip](https://github.com/utrustdev/utrust-developers-page/files/3917494/Utrust.merchant.kit.v2.zip)
 
     # Integrations
-
-    Utrust provides the following plugins for you to start accepting cryptocurrencies
 
     ## Magento 1
     Start accepting cryptocurrencies in your Magento 1 store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-magento1).
