@@ -11,6 +11,16 @@ const options = {
     logo: {
       gutter: "0px"
     },
+    typography: {
+      fontWeightRegular: "400",
+      fontWeightBold: "600",
+      fontWeightLight: "300",
+      fontFamily: "ibmplexsans, sans-serif",
+      headings: {
+        fontFamily: "fkgrotesk, sans-serif",
+        fontWeight: "500"
+      }
+    },
     rightPanel: {
       backgroundColor: "#fff",
       width: "30%"

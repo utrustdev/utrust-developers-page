@@ -1,9 +1,14 @@
 openapi: 3.0.0
 info:
   x-logo:
+<<<<<<< HEAD
     backgroundColor: "#FAFAFA"
     url: "https://user-images.githubusercontent.com/1558992/70169428-b2f3a580-16c2-11ea-90a9-12ef570d046b.png"
   title: Docs for Developers
+=======
+    url: "https://user-images.githubusercontent.com/1558992/70168665-3613fc00-16c1-11ea-84ba-337ca19efcb1.png"
+  title: Developers
+>>>>>>> 30b3d98... changes
   description: |
     Accept crypto payments in your online store or website, easily with Utrust. 
     This is the place where you can find all the tools to integrate Utrust Payment method in your store or website.
