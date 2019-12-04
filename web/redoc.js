@@ -9,8 +9,6 @@ const options = {
       }
     },
     logo: {
-      maxHeight: ({ menu }) => menu.width,
-      maxWidth: ({ menu }) => menu.width,
       gutter: "0px"
     },
     rightPanel: {
