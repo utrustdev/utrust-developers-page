@@ -1,7 +1,8 @@
 openapi: 3.0.0
 info:
   x-logo:
-    url: "https://user-images.githubusercontent.com/1558992/70155333-f55cb880-16a9-11ea-9f3d-3ebca67ed288.png"
+    backgroundColor: "#FAFAFA"
+    url: "https://user-images.githubusercontent.com/1558992/70169428-b2f3a580-16c2-11ea-90a9-12ef570d046b.png"
   title: Developers
   description: |
     Accept crypto payments in your online store or website, easily with Utrust. 

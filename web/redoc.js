@@ -8,6 +8,11 @@ const options = {
         main: "#5b47ff"
       }
     },
+    logo: {
+      maxHeight: ({ menu }) => menu.width,
+      maxWidth: ({ menu }) => menu.width,
+      gutter: "0px"
+    },
     rightPanel: {
       backgroundColor: "#fff",
       width: "30%"
