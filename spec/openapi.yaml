@@ -31,7 +31,9 @@ info:
 
     What customer sees and doesn't see has 7 stages:
 
-    ![Checkout_process_diagram](https://user-images.githubusercontent.com/1558992/69982001-57db7a80-152b-11ea-89b0-b6acb629b7a3.png)
+    <div style="max-width: 650px; margin: 28px auto;">
+          <img src="https://user-images.githubusercontent.com/1558992/69982001-57db7a80-152b-11ea-89b0-b6acb629b7a3.png" alt="Checkout process diagram" />
+    </div>
 
     1. [**Store**] On checkout, the customer creates the order. The store server gets the `redirect_url` on the HTTP response to the endpoint **[/stores/orders](https://docs.api.utrust.com/#operation/createOrder)**.
     2. [**Store**] Redirects the customer to the UTRUST Payment widget.
