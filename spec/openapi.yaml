@@ -52,25 +52,25 @@ info:
     Our payment method accepts any external wallet but for testing we recommend using [MetaMask](https://https://metamask.io/), an Ethereum wallet. 
     After installing, you need to change to the Ropsten Test Network for testing with our sandbox environment:
 
-    ![MetaMask_wallet](https://lh5.googleusercontent.com/5JE4WZ-VGoqxIcSZ_fh5JSLwBpvDX2KBqVrxeEz_Cbjp1RdWUGQ7l5j8Ht1LwN-lXJqJEI-buS33eLlhQ0OEv5hQKgmNWoM1JEf_DJWcLNUXR3_NjfLbk5_1nCWFqALMlp-c2utN)
+    ![MetaMask_wallet](https://user-images.githubusercontent.com/1558992/70264200-e94b2680-178f-11ea-8212-885c5235c553.png)
 
     Once you have it, go to our [Sandbox online store](https://sandbox.store.utrust.com) to try it!
     Select an item and proceed to checkout. You will see Utrust payment method, choose it.
     Once you proceed to the payment, you will see Utrust Payment Widget which should look like this:
 
-    ![Utrust_payment_widget_on_sandbox_store](https://lh4.googleusercontent.com/OwJl2McnvNGKC3EWWhkQYXUCLu7bmp_qREkTGg9qh9N2X0Wsle3cFCbccOWzw6Zk4i0OhfF0MzpRpaJDZL0ZDUVux5hpnrz_sqEYvRi_7VQigfBgZqM-fc8DSbX3PlBG-ptM9X2G)
+    ![Utrust_payment_widget_on_sandbox_store](https://user-images.githubusercontent.com/1558992/70264232-f700ac00-178f-11ea-8b21-5c3708efcb3d.png)
 
     By selecting the ETH currency, you’ll access to the address and amount (choose Manual):
 
-    ![Utrust_payment_widget_awaiting](https://lh6.googleusercontent.com/MCRm5bRcNBy5ddzqZOkx5omRkxg50hFCQqKOWXICr7OjiiWha2V22YZy0BLBkwpbZ0YhmIiau6Fi8fc3fa-25sB2pBW4Z2eW0OhxdAwsn4pT9xS9DsBaQSr5bT3STeiwPooaBXFI)
+    ![Utrust_payment_widget_awaiting](https://user-images.githubusercontent.com/1558992/70264267-07188b80-1790-11ea-816b-bf4e0839f7d4.png)
 
     Afterwards, input those into MetaMask to fulfill the payment:
 
-    ![https://lh5.googleusercontent.com/LJa2DKFYFptnoJMsSga6UDNxSG_OpsOjtUGtCtDKR212TdjapunbB1OWgY2X54VmggLJkVmEisEibCeRk8Rkr7zy7ui36xmo-VBBEvp8Cjwuj1_5mtS5g6xV_53AMNzpW7KefVPy](https://lh5.googleusercontent.com/LJa2DKFYFptnoJMsSga6UDNxSG_OpsOjtUGtCtDKR212TdjapunbB1OWgY2X54VmggLJkVmEisEibCeRk8Rkr7zy7ui36xmo-VBBEvp8Cjwuj1_5mtS5g6xV_53AMNzpW7KefVPy)
+    ![MetaMask_filled](https://user-images.githubusercontent.com/1558992/70264269-07188b80-1790-11ea-9655-e162e90f6d3b.png)
 
     After a short time the payment should be completed and you should see this page:
 
-    ![https://lh4.googleusercontent.com/DUay-Hpbwsf3-dROkK2F0q946F5FDshNzTApo0jUPud2OR7oShhmhbV_gbPo9gCS2N8dWzoRx7FKOxyqrVb07jiETwYPa-zaCXZq5gh_jRQpo4zbZHW-Ibsp18k2suKg4iXxFOYp](https://lh4.googleusercontent.com/DUay-Hpbwsf3-dROkK2F0q946F5FDshNzTApo0jUPud2OR7oShhmhbV_gbPo9gCS2N8dWzoRx7FKOxyqrVb07jiETwYPa-zaCXZq5gh_jRQpo4zbZHW-Ibsp18k2suKg4iXxFOYp)
+    ![Utrust_payment_widget_completed](https://user-images.githubusercontent.com/1558992/70264270-07188b80-1790-11ea-98dd-d0f3d45d7f28.png)
 
     This is not a payment confirmation yet, but it's a good indication that the payment will go through. However, only when we have a real confirmation will we send you the notifications, via [webhook](#section/Basics/4.-Webhook). 
     For example, if the customer selected Ethereum, it can take around 5-10 mins for the full confirmation. 
@@ -88,7 +88,7 @@ info:
 
     First you need a Merchant account on our testing environment (sandbox), [follow this link](https://merchants.sandbox-utrust.com/onboarding/sign-up).
     Fill the form and there you go! You should have access.
-    ![https://lh5.googleusercontent.com/8kHwTkyNVPLffHz7YXs8e8AkjBi9CaVpZILeZyu7UfgpdC54_hGwd4dHhS3VWlwwL8iDL6FnQ7k9suvNPLOr8_ERutHf8DUdBWoZm5CsOSfpeRc5nMzti0S4qzJv2LWYYLLf8sLK](https://lh5.googleusercontent.com/8kHwTkyNVPLffHz7YXs8e8AkjBi9CaVpZILeZyu7UfgpdC54_hGwd4dHhS3VWlwwL8iDL6FnQ7k9suvNPLOr8_ERutHf8DUdBWoZm5CsOSfpeRc5nMzti0S4qzJv2LWYYLLf8sLK)
+    ![Merchant_Dashboard_signup](https://user-images.githubusercontent.com/1558992/70264271-07b12200-1790-11ea-810a-dafcc0b0d56f.png)
 
     You can add more users to the production account if needed, ask us.
 
@@ -96,11 +96,11 @@ info:
 
     You’ll receive an email with the information needed in order to access it. After that, the first thing you need is to generate credentials for your store, which can be done in the Utrust Merchant Dashboard. Once inside, go to the Organization Settings section and click on the “Generate Credentials” button:
 
-    ![https://lh4.googleusercontent.com/MSRtlHQ8wou0b3-SGOLDgx7cizPiXoVNwCZpE1zMFrtR_1i8Mh1Vz6MA8elRhYmgR3RowoMJnL0FpYviyN7buUxez_xDoZm8yIUiqLfcMLkhYD4SSbevbrPWNqPKmVPj5m-BBZMb](https://lh4.googleusercontent.com/MSRtlHQ8wou0b3-SGOLDgx7cizPiXoVNwCZpE1zMFrtR_1i8Mh1Vz6MA8elRhYmgR3RowoMJnL0FpYviyN7buUxez_xDoZm8yIUiqLfcMLkhYD4SSbevbrPWNqPKmVPj5m-BBZMb)
+    ![Merchant_dashboard_organization](https://user-images.githubusercontent.com/1558992/70264272-07b12200-1790-11ea-989d-9ea206e32874.png)
 
     You’ll then be prompted with the `API Key` and `Webhooks Secret` for your store. Save this information somewhere, as you won’t be able to access it again (you can, of course, generate new credentials).
 
-    ![https://lh4.googleusercontent.com/EVgweG5O8wwO8aGk4woHaRVU-cg4TqpizsqQDlEcwehtCgQ4qAFcVVz5jSHhWeNIWIznbbhewkTFQOogyrPnkJWC0MUGgtUlS4t22otUBX0sASunQSE7Kryo7pB1cen9keGKrpum](https://lh4.googleusercontent.com/EVgweG5O8wwO8aGk4woHaRVU-cg4TqpizsqQDlEcwehtCgQ4qAFcVVz5jSHhWeNIWIznbbhewkTFQOogyrPnkJWC0MUGgtUlS4t22otUBX0sASunQSE7Kryo7pB1cen9keGKrpum)
+    ![Merchant_dasboard_new_credentials](https://user-images.githubusercontent.com/1558992/70264273-07b12200-1790-11ea-91c5-70ca1b2ef16b.png)
 
     ### 3.4. Creating the order
 
