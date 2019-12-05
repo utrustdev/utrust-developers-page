@@ -32,7 +32,7 @@ info:
     What customer sees and doesn't see has 7 stages:
 
     <div style="max-width: 650px; margin: 28px auto;">
-      <img src="https://user-images.githubusercontent.com/1558992/70262785-e00c8a80-178c-11ea-9cea-1b3a19c81b91.png" alt="Checkout process diagram" />
+      <img src="https://user-images.githubusercontent.com/1558992/70262908-1b0ebe00-178d-11ea-8825-2d341e7cba1b.png" alt="Checkout process diagram" />
     </div>
 
     1. [**Store**] On checkout, the customer creates the order. The store server gets the `redirect_url` on the HTTP response to the endpoint **[/stores/orders](https://docs.api.utrust.com/#operation/createOrder)**.
