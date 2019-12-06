@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Install the required languages versions
+asdf install
+asdf reshim
+
+# Install JavaScript dependencies
+npm install
