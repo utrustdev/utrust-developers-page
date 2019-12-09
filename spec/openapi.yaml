@@ -3,77 +3,103 @@ info:
   x-logo:
     backgroundColor: "#FAFAFA"
     url: "https://user-images.githubusercontent.com/1558992/70169428-b2f3a580-16c2-11ea-90a9-12ef570d046b.png"
-  title: Docs for Developers
+  title: Utrust for Developers
   description: |
-    Accept crypto payments in your online store or website, easily with Utrust. 
-    This is the place where you can find all the tools to integrate Utrust Payment method in your store or website.
-
-    In the [Basics](#section/Basics) section you can find a set of concepts so that you can be able to do a proper integration of our payment method.
+    Welcome to the Utrust documentation for Developers. Here you will find
+    everything you need to start accepting crypto payments in your online store
+    or website easily with Utrust.
 
 
     # Basics
 
-    ## Before you start
+    In this section you can find a set of concepts that will help you understand
+    how Utrust handles payments, so that you can integrate our payment method
+    without any trouble.
 
-    You should be aware and accept that we have the following limitations:
+    ## 0. Before you start
 
-    > 💵 You can only create orders in **EUR, GBP or USD (choose one!).**
+    Be aware Utrust Payments have the following limitations:
 
-    > ⏰ You have to consider that our payment confirmation can take **up to 2 hours**.
+    > 💵 You can only create orders in **EUR, GBP or USD** (and you must choose one!);
 
-    > 🌍 Our Payment Widget only supports **English** language.
+    > ⏰ Our payment confirmation can take **up to 2 hours**;
+
+    > 🌍 Our Payment Widget is only available in **English**.
+
 
     ## 1. Checkout process
 
-    Our payment flow is asynchronous: the customer has 15 minutes to choose the cryptocurrency and pay by sending the funds to the address we provide. 
-    Then we confirm the transaction and send a notification to the merchant via a webhook (up to 2 hours). 
-    This is different from a synchronous credit card payment.
+    Our payment flow is **asynchronous**; the customer has 15 minutes to choose
+    the cryptocurrency and issue a transaction in the respective blockchain,
+    sending the requested funds to the address we provided.
 
-    What customer sees and doesn't see has 7 stages:
+    Once we detect the pending transaction, which usually happens in a matter of
+    seconds, we recognize the payment and redirect the user to the merchant
+    success callback URL.
+
+    Upon confirmation of the transaction, which can take up to 2 hours, we send
+    a notification to the merchant store or website via a [webhook]().
+
+    In more detail, this flow has 7 stages:
 
     <div style="max-width: 650px; margin: 28px auto;">
       <img src="https://user-images.githubusercontent.com/1558992/70262908-1b0ebe00-178d-11ea-8825-2d341e7cba1b.png" alt="Checkout process diagram" />
     </div>
 
-    1. [**Store**] On checkout, the customer creates the order. The store server gets the `redirect_url` on the HTTP response to the endpoint **[/stores/orders](https://docs.api.utrust.com/#operation/createOrder)**.
-    2. [**Store**] Redirects the customer to the UTRUST Payment widget.
-    3. [**Utrust**] The customer pays the order and sees "Payment Complete" message. Utrust also sends the customer an email with the payment proof. Payment is only detected at this stage, Utrust still needs to confirm it, 
-    but everything is completed on the customer side.
-    4. [**Utrust**] Redirects the customer back to the store (`return_url`).
-    5. [**Store**] Shows "Thank you for your order" page.
-    6. [**Utrust**] Depending on the cryptocurrency chosen, it might take some minutes or even hours (Bitcoin) to confirm the transaction on the blockchain. Once confirmed, Utrust sends an HTTP request to the Store server 
-    with the event type `ORDER.PAYMENT.RECEIVED`.
-    7. [**Store**] Verifies and validates the signature in the HTTP request body (using the `webhooks secret` to decode it) and, if valid, changes the Order state to "Paid" (our to whatever your CMS wants as a next state). 
-    The Store usually also sends the email with the invoice to the customer at this stage.
+    1. [**Merchant**] On checkout, the merchant system sends the order details to
+       create it on our server, getting a `redirect_url` in the response 
+       (see [the create order endpoint](https://docs.api.utrust.com/#operation/createOrder)).
+    2. [**Merchant**] Redirects users to the provided URL, which shows them the
+       Utrust Payment widget.
+    3. [**Utrust**] Users pay for the order, seeing a "Payment Complete"
+       message. Utrust also sends them an email with the detected payment
+       details. This completes the user interaction.
+    4. [**Utrust**] Redirects the customer back to the `return_url` provided
+       when the order was created.
+    6. [**Utrust**] It takes some time to confirm transactions (minutes or hours,
+       depending on the blockchain). Once confirmed, Utrust sends an HTTP
+       request to the Merchant system notifying the payment was received.
+    7. [**Store**] Verifies and validates the request, and, if valid, finalizes
+       the order.
+
 
     ## 2. Try our flow
 
-    The best way to learn about what we do is by testing it. For this you should prepare an external wallet with fake money. 
-    Our payment method accepts any external wallet but for testing we recommend using [MetaMask](https://https://metamask.io/), an Ethereum wallet. 
-    After installing, you need to change to the Ropsten Test Network for testing with our sandbox environment:
+    The best way to learn about what we do is by trying it out yourself. For
+    this you need an Ethereum wallet and some "test" money.
+    Any wallet will do, but we recommend using
+    [MetaMask](https://https://metamask.io/) due to its ease of use.
+    After installing, make sure to change to the Ropsten Test Network, which
+    is what we use in our sandbox environment.
 
     ![MetaMask_wallet](https://user-images.githubusercontent.com/1558992/70264200-e94b2680-178f-11ea-8212-885c5235c553.png)
 
-    Once you have it, go to our [Sandbox online store](https://sandbox.store.utrust.com) to try it!
-    Select an item and proceed to checkout. You will see Utrust payment method, choose it.
-    Once you proceed to the payment, you will see Utrust Payment Widget which should look like this:
+    When you are ready, go to our [Sandbox online store](https://sandbox.store.utrust.com)
+    and give it a spin by selecting an item and proceeding to checkout.
+    Choose the Utrust payment method.
+    Once you proceed to the payment, you will see Utrust Payment Widget.
 
     ![Utrust_payment_widget_on_sandbox_store](https://user-images.githubusercontent.com/1558992/70264232-f700ac00-178f-11ea-8b21-5c3708efcb3d.png)
 
-    By selecting the ETH currency, you’ll access to the address and amount (choose Manual):
+    Select the ETH currency. The widget will then show you a QR Code with the
+    payment details. If using Metamask, change to the Manual tab, and copy the
+    address.
 
     ![Utrust_payment_widget_awaiting](https://user-images.githubusercontent.com/1558992/70264267-07188b80-1790-11ea-816b-bf4e0839f7d4.png)
 
-    Afterwards, input those into MetaMask to fulfill the payment:
+    Open Metamask, and send the shown value in ETH to the provided address.
 
     ![MetaMask_filled](https://user-images.githubusercontent.com/1558992/70264269-07188b80-1790-11ea-9655-e162e90f6d3b.png)
 
-    After a short time the payment should be completed and you should see this page:
+    Wait some seconds, and the widget should change to show the payment is
+    complete.
 
     ![Utrust_payment_widget_completed](https://user-images.githubusercontent.com/1558992/70264270-07188b80-1790-11ea-98dd-d0f3d45d7f28.png)
 
-    This is not a payment confirmation yet, but it's a good indication that the payment will go through. However, only when we have a real confirmation will we send you the notifications, via [webhook](#section/Basics/4.-Webhook). 
-    For example, if the customer selected Ethereum, it can take around 5-10 mins for the full confirmation. 
+    This is not a payment confirmation yet, but it's a good indication that the
+    payment will go through. However, only when we have a real confirmation will
+    we send you the notifications, via [webhook](#section/Basics/4.-Webhook). 
+    
 
     ## 3. Build the order
 
