@@ -5,7 +5,7 @@ const options = {
   theme: {
     colors: {
       primary: {
-        main: "#5b47ff"
+        main: "#5B47FF"
       }
     },
     logo: {
