@@ -40,7 +40,7 @@ info:
     Upon confirmation of the transaction, which can take up to 2 hours, we send
     a notification to the merchant store or website via a [webhook]().
 
-    In more detail, this flow has 7 stages:
+    In more detail, this flow has 6 stages:
 
     <div style="max-width: 650px; margin: 28px auto;">
       <img src="https://user-images.githubusercontent.com/1558992/70262908-1b0ebe00-178d-11ea-8825-2d341e7cba1b.png" alt="Checkout process diagram" />
@@ -56,10 +56,10 @@ info:
        details. This completes the user interaction.
     4. [**Utrust**] Redirects the customer back to the `return_url` provided
        when the order was created.
-    6. [**Utrust**] It takes some time to confirm transactions (minutes or hours,
+    5. [**Utrust**] It takes some time to confirm transactions (minutes or hours,
        depending on the blockchain). Once confirmed, Utrust sends an HTTP
        request to the Merchant system notifying the payment was received.
-    7. [**Store**] Verifies and validates the request, and, if valid, finalizes
+    6. [**Store**] Verifies and validates the request, and, if valid, finalizes
        the order.
 
 
@@ -99,7 +99,7 @@ info:
     This is not a payment confirmation yet, but it's a good indication that the
     payment will go through. However, only when we have a real confirmation will
     we send you the notifications, via [webhook](#section/Basics/4.-Webhook). 
-    
+
 
     ## 3. Build the order
 
