@@ -6,14 +6,17 @@ Although this is not an API specs page, this is built with [ReDoc](https://githu
 
 ### Install
 
-1. Install [Node JS](https://nodejs.org/)
-2. Clone repo and run `npm install` in the repo root
+```
+bin/setup
+```
 
 ### Usage
 
-#### `npm start`
+```
+bin/server
+```
 
-Starts the development server.
+Starts the development server on [localhost:8080](localhost:8080).
 
 #### `npm run build`
 
