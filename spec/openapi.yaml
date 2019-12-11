@@ -103,36 +103,64 @@ info:
 
     ## 3. Build the order
 
-    Now that you understand the flow and tried it, let's build it!
+    Assuming you now have a clear understanding of the flow, let's integrate
+    your system.
 
-    ### 3.1. Sandbox vs. Production
 
-    To distinguish between sandbox and production environments we have “**sandbox-utrust.com**” and “**utrust.com**” domains, respectively. All the endpoints should use the respective domain for the environment that you wish 
-    to work on.
+    ### 3.1. Sandbox and Production
 
-    ### 3.2. Sign up on Sandbox
+    In addition to the real-world payment processing environment, Utrust offers
+    developers an environment where they can test their integration using
+    not-so-valuable test money. We call these environments Production and
+    Sandbox, respectively.
 
-    First you need a Merchant account on our testing environment (sandbox), [follow this link](https://merchants.sandbox-utrust.com/onboarding/sign-up).
-    Fill the form and there you go! You should have access.
+    The two environments are identical for most of the time, differing only in
+    that Production uses blockchains mainnets, and Sandbox uses the respective
+    testnets.
+
+    We also release new features to Sandbox a bit before them reaching
+    Production, but this usually happens in a couple of hours.
+
+    Depending on which environment they want to target, developers must choose
+    the appropriate hostname to target their requests. Production uses the
+    `utrust.com` domain, whereas Sandbox uses the `sandbox-utrust.com` domain.
+
+
+    ### 3.2. Sign up for Sandbox
+
+    To use our Sandbox environment
+    [first you need a merchant account](https://merchants.sandbox-utrust.com/onboarding/sign-up).
+    Remember Production is a separate environment, your real merchant account
+    won't exist in Sandbox (but here you can have many).
+
     ![Merchant_Dashboard_signup](https://user-images.githubusercontent.com/1558992/70264271-07b12200-1790-11ea-810a-dafcc0b0d56f.png)
 
-    You can add more users to the production account if needed, ask us.
 
     ### 3.3. Authentication
 
-    You’ll receive an email with the information needed in order to access it. After that, the first thing you need is to generate credentials for your store, which can be done in the Utrust Merchant Dashboard. Once inside, go to the Organization Settings section and click on the “Generate Credentials” button:
+    Upon sign up, you will receive an email with the access information. You
+    must then generate credentials for your store, which can be done through
+    your Utrust Merchant Dashboard. In there, go to the Organization Settings
+    section and click on the _Generate Credentials_ button.
 
     ![Merchant_dashboard_organization](https://user-images.githubusercontent.com/1558992/70264272-07b12200-1790-11ea-989d-9ea206e32874.png)
 
-    You’ll then be prompted with the `API Key` and `Webhooks Secret` for your store. Save this information somewhere, as you won’t be able to access it again (you can, of course, generate new credentials).
+    You’ll then be shown the `API Key` and `Webhooks Secret` for your store.
+    This information will not visible afterwards, make sure to save it.
 
     ![Merchant_dasboard_new_credentials](https://user-images.githubusercontent.com/1558992/70264273-07b12200-1790-11ea-91c5-70ca1b2ef16b.png)
 
+
     ### 3.4. Creating the order
 
-    Once you have all the information needed from a customer and all that’s missing is paying, you can inform us of that by calling the [create order endpoint](https://docs.api.utrust.com/#operation/createOrder). Don't forget 
-    to add the `api key` on the headers (as a Bearer token).
-    The response is a URL to which you should redirect the customer, on success we will redirect them to the `return_url` and on customer cancel to the `cancel_url` (if present).
+    Orders are base concept to process payments in Utrust. To process a payment
+    the system must first call the
+    [create order endpoint](https://docs.api.utrust.com/#operation/createOrder).
+
+    The response will then contain a URL to which users must be redirected. When
+    the payment is processed Utrust redirects the user back to the system, using
+    the URLs provided.
+
 
     ### 3.5. Add the Utrust method option on Checkout
 
