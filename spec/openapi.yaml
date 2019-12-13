@@ -195,8 +195,6 @@ info:
 
         b. If it's `ORDER.PAYMENT.CANCELLED` → you should change the Order to `cancelled`;
         
-        c. If it's `ORDER.PAYMENT.FAILED` → you should change the Order to `cancelled` or `failed`;
-
     4. Then you need to reply our request:
 
         a. If everything went well → status: **200 OK**; with no body or a valid JSON (e.g. `{ success: true }`);
