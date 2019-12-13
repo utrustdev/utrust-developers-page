@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   x-logo:
     backgroundColor: "#FAFAFA"
-    url: "https://user-images.githubusercontent.com/1558992/70169428-b2f3a580-16c2-11ea-90a9-12ef570d046b.png"
+    url: "https://user-images.githubusercontent.com/1558992/70795610-18692580-1d98-11ea-89da-619df14eed53.png"
   title: Utrust for Developers
   description: |
     Welcome to the Utrust documentation for Developers. Here you will find
