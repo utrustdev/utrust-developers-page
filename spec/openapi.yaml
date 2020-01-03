@@ -38,7 +38,7 @@ info:
     success callback URL.
 
     Upon confirmation of the transaction, which can take up to 2 hours, we send
-    a notification to the merchant store or website via a [webhook]().
+    a notification to the merchant store or website via a [webhook](#section/Basics/4.-Webhook).
 
     In more detail, this flow has 6 stages:
 
