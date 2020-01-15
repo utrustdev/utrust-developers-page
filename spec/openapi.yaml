@@ -191,15 +191,17 @@ info:
     2. Check if the signature is valid;
     3. If is valid, check the `event_type`, it can be:
 
-        a. If it's `ORDER.PAYMENT.RECEIVED` → you should change the Order to `paid` or whatever you have as the next step in your orders process;
+        * If it's `ORDER.PAYMENT.RECEIVED` → you should change the Order to `paid` or whatever you have as the next step in your orders process;
 
-        b. If it's `ORDER.PAYMENT.CANCELLED` → you should change the Order to `cancelled`;
+        * If it's `ORDER.PAYMENT.CANCELLED` → you should change the Order to `cancelled`;
         
     4. Then you need to reply our request:
 
-        a. If everything went well → status: **200 OK**; with no body or a valid JSON (e.g. `{ success: true }`);
+        * If everything went well → status: **200 OK**; with no body or a valid JSON (e.g. `{ success: true }`);
 
-        b. If something went wrong → status: **500 Internal Server Error**;
+        * If signature or body request is invalid → status: **400 Bad Request**;
+
+        * If something else went wrong → status: **500 Internal Server Error**;
 
     This way we know what happened on your server and we can stop retrying to send the webhook. We will do it once a minute for 10 minutes. 
 
