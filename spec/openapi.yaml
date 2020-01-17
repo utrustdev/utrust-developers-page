@@ -287,16 +287,37 @@ info:
 
     # Libraries
 
-    ## PHP
+    <table>
+      <thead>
+        <tr>
+          <th>Language</th>
+          <th>Repository</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PHP</td>
+          <td>
+            <a href="https://github.com/utrustdev/utrust-php">
+              https://github.com/utrustdev/utrust-php
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-    We've put in place a simple PHP library to get you started easily with the core functionalities of our payment method. Available via composer:
-    ```
-    composer require utrust/utrust
-    ```
-    Check the code hosted on [GitHub](https://github.com/utrustdev/utrust-php).
+    **Is your language missing from this list?**
 
-    # APIs 
+    <a href="mailto:apiteam@utrust.com?subject=Missing language library">Let us
+    know</a> so we can consider it in our development roadmap.
 
+    Alternatively, use our [API documentation](https://docs.api.utrust.com/) to
+    build the library you need and join forces with us to foster an active
+    open-source community around Utrust.
+
+
+    # APIs
+    
     Utrust provides two API's for your use: Stores API and Merchants API.
 
     [Utrust API Reference →](https://docs.api.utrust.com)
