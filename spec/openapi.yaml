@@ -317,9 +317,12 @@ info:
 
 
     # APIs
-    
-    Utrust provides two API's for your use: Stores API and Merchants API.
 
-    [Utrust API Reference →](https://docs.api.utrust.com)
+    The Utrust platform provides public APIs that you can use to build your
+    own tools around our ecosystem.
+
+    For more details, check the [Utrust API
+    Reference](https://docs.api.utrust.com).
+
 
 paths: false
