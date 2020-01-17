@@ -162,99 +162,167 @@ info:
     the URLs provided.
 
 
-    ### 3.5. Add the Utrust method option on Checkout
-
-    When listing our payment method in your store, you can use [these assets](#section/Basics/5.-Assets).
-
-    ### 3.6. Going into production
+    ### 3.5. Going into production
 
     All tests went good and you want to move into production? To create a `production` account [go here](https://merchants.utrust.com/).
     You can sign up in production, but your account needs to be revised and enabled by the Utrust team.
-    If you need to add more users, please let us know and we will add them manually to the same Organization.
+    If you need to add more users, please <a href="mailto:support@utrust.com?subject=Need more users">let us know</a> and we will add them manually to the same Organization.
     You will have to generate your production credentials.
 
-    ## 4. Webhook
 
-    You might want to update the status of your Order automatically when we confirm the payment. We use webhooks to send you that information. 
-    This events need to be validated so that you are sure they are real and coming from Utrust, that's for what the `Webhooks Secret` is for.
-    Our [integrations](#section/Integrations) handle this automatically. Alternativaly, you can use our [libraries](#section/Libraries) to verify the payload signature or manually using the instructions in our [API Reference 
-    Webhooks](https://docs.api.utrust.com/#tag/Webhooks) section. 
+    ## 4. Webhooks
 
-    ### Being notified of payment confirmation
+    Merchant systems can be notified of events in the Utrust platform through
+    webhooks. At the moment these events include:
 
-    After the payment is confirmed, we will send an HTTP POST request to whatever you specified as `callback_url` when creating the order. All the information about 
-    being ready for these requests (and validating them) are explained also on the [API Reference Webhooks](https://docs.api.utrust.com/#tag/Webhooks).
+    - Confirmation of the order payment;
+    - Cancellation of the order.
 
-    You will need to get ready for the following steps:
+    The URL to use for these webhooks is defined by the `callback_url` field
+    when creating an order.
 
-    1. Setting up a webhook on the endpoint you defined as `callback_url`;
-    2. Check if the signature is valid;
-    3. If is valid, check the `event_type`, it can be:
+    All webhook requests are expected to respond with HTTP status 2xx in case
+    of success. Any other status code, or the lack of a response, will be
+    considered a failure. In that case Utrust will retry up to 15 times with an
+    exponential back off following a Fibonacci sequence -- first retry happens
+    after 1 minute, second happens 2 minutes after the first one, third happens
+    3 minutes after the second one, etc.
 
-        * If it's `ORDER.PAYMENT.RECEIVED` → you should change the Order to `paid` or whatever you have as the next step in your orders process;
+    All requests sent by Utrust to the provided URL are signed for validation
+    using the `Webhooks Secret` generated (see [3.3
+    Authetication](#33-authentication)).
 
-        * If it's `ORDER.PAYMENT.CANCELLED` → you should change the Order to `cancelled`;
-        
-    4. Then you need to reply our request:
+    When using our [integrations](#section/Integrations), webhooks are set and
+    validated automatically as part of the order payment flow. For custom
+    integrations we make available [libraries](#section/Libraries) able to
+    validate the requests.
 
-        * If everything went well → status: **200 OK**; with no body or a valid JSON (e.g. `{ success: true }`);
+    For manual validation instructions, and further technical details, check
+    the [Webhooks](https://docs.api.utrust.com/#tag/Webhooks) section in the
+    [Utrust API](https://docs.api.utrust.com) documentation.
 
-        * If signature or body request is invalid → status: **400 Bad Request**;
-
-        * If something else went wrong → status: **500 Internal Server Error**;
-
-    If our HTTP request to your system fails, we will retry 15 times with an exponential back off. It follows the 
-    Fibonacci sequence pattern, therefore, the last event will be 987 minutes after the first one (that's 16h27).
-
-    Check more about this on our [API Reference Webhooks](https://docs.api.utrust.com/#tag/Webhooks).
 
     ## 5. Assets
 
-    You might need our logo for listing it on the payment methods options and your website footer. The following kit should provide you with the necessary options for that: 
-    [Utrust_Merchant_kit.zip](https://github.com/utrustdev/utrust-developers-page/files/3917494/Utrust.merchant.kit.v2.zip)
+    The Utrust Merchant assets kit includes everything for using the official
+    Utrust branding in your website. Download it
+    [here](https://github.com/utrustdev/utrust-developers-page/files/3917494/Utrust.merchant.kit.v2.zip).
+
+
 
     # Integrations
 
-    ## Magento 1
+    Utrust develops and maintains plugins for some of the most popular
+    e-commerce solutions.
 
-    ![Magento 1](https://user-images.githubusercontent.com/1558992/70810396-97bc2080-1dbb-11ea-8724-fb1ed032da18.png)
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Platform</th>
+          <th>Repository</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">
+            <img alt="Magento logo" src="https://user-images.githubusercontent.com/1558992/70810396-97bc2080-1dbb-11ea-8724-fb1ed032da18.png">
+          </td>
+          <td>
+            Magento 1
+          </td>
+          <td>
+            <a href="https://github.com/utrustdev/utrust-for-magento1">
+              https://github.com/utrustdev/utrust-for-magento1
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Magento 2
+          </td>
+          <td>
+            <a href="https://github.com/utrustdev/utrust-for-magento2">
+              https://github.com/utrustdev/utrust-for-magento2
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img alt="Prestashop logo" src="https://user-images.githubusercontent.com/1558992/70810397-97bc2080-1dbb-11ea-815a-32f389f3b0c3.png">
+          </td>
+          <td>
+            Prestashop
+          </td>
+          <td>
+            <a href="https://github.com/utrustdev/utrust-for-prestashop">
+              https://github.com/utrustdev/utrust-for-prestashop
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img alt="WooCommerce logo" src="https://user-images.githubusercontent.com/1558992/70810398-9854b700-1dbb-11ea-8127-d926450a8e62.png">
+          </td>
+          <td>
+            WooCommerce
+          </td>
+          <td>
+            <a href="https://github.com/utrustdev/utrust-for-woocommerce">
+              https://github.com/utrustdev/utrust-for-woocommerce
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-    Start accepting cryptocurrencies in your Magento 1 store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-magento1).
+    **Is your platform missing from this list?**
 
-    ## Magento 2
+    <a href="mailto:apiteam@utrust.com?subject=Missing platform integration">Let us know</a> so we can consider it in our
+    development roadmap.
 
-    ![Magento 2](https://user-images.githubusercontent.com/1558992/70810396-97bc2080-1dbb-11ea-8724-fb1ed032da18.png)
+    Alternatively, use our [API documentation](https://docs.api.utrust.com/) to
+    build the integration you need and join forces with us to foster an active
+    open-source community around Utrust.
 
-    Start accepting cryptocurrencies in your Magento 2 store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-magento2).
-
-    ## PrestaShop
-
-    ![Prestashop](https://user-images.githubusercontent.com/1558992/70810397-97bc2080-1dbb-11ea-815a-32f389f3b0c3.png)
-
-    Start accepting cryptocurrencies in your PrestaShop store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-prestashop).
-
-    ## WooCommerce
-
-    ![Woocommerce](https://user-images.githubusercontent.com/1558992/70810398-9854b700-1dbb-11ea-8127-d926450a8e62.png)
-
-    Start accepting cryptocurrencies in your WooCommerce store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-woocommerce).
 
     # Libraries
 
-    ## PHP
+    <table>
+      <thead>
+        <tr>
+          <th>Language</th>
+          <th>Repository</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PHP</td>
+          <td>
+            <a href="https://github.com/utrustdev/utrust-php">
+              https://github.com/utrustdev/utrust-php
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-    We've put in place a simple PHP library to get you started easily with the core functionalities of our payment method. Available via composer:
-    ```
-    composer require utrust/utrust
-    ```
-    Check the code hosted on [GitHub](https://github.com/utrustdev/utrust-php).
+    **Is your language missing from this list?**
 
-    # APIs 
+    <a href="mailto:apiteam@utrust.com?subject=Missing language library">Let us
+    know</a> so we can consider it in our development roadmap.
+
+    Alternatively, use our [API documentation](https://docs.api.utrust.com/) to
+    build the library you need and join forces with us to foster an active
+    open-source community around Utrust.
+
+
+    # APIs
 
     The Utrust platform provides public APIs that you can use to build your
     own tools around our ecosystem.
 
     For more details, check the [Utrust API
     Reference](https://docs.api.utrust.com).
+
 
 paths: false
