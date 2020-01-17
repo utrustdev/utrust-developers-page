@@ -170,7 +170,7 @@ info:
 
     All tests went good and you want to move into production? To create a `production` account [go here](https://merchants.utrust.com/).
     You can sign up in production, but your account needs to be revised and enabled by the Utrust team.
-    If you need to add more users, please let us know and we will add them manually to the same Organization.
+    If you need to add more users, please [let us know](mailto:support@utrust.com) and we will add them manually to the same Organization.
     You will have to generate your production credentials.
 
     ## 4. Webhook
@@ -213,31 +213,81 @@ info:
     You might need our logo for listing it on the payment methods options and your website footer. The following kit should provide you with the necessary options for that: 
     [Utrust_Merchant_kit.zip](https://github.com/utrustdev/utrust-developers-page/files/3917494/Utrust.merchant.kit.v2.zip)
 
+
     # Integrations
 
-    ## Magento 1
+    Utrust develops and maintains plugins for some of the most popular
+    e-commerce solutions.
 
-    ![Magento 1](https://user-images.githubusercontent.com/1558992/70810396-97bc2080-1dbb-11ea-8724-fb1ed032da18.png)
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Platform</th>
+          <th>Repository</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">
+            <img alt="Magento logo" src="https://user-images.githubusercontent.com/1558992/70810396-97bc2080-1dbb-11ea-8724-fb1ed032da18.png">
+          </td>
+          <td>
+            Magento 1
+          </td>
+          <td>
+            <a href="https://github.com/utrustdev/utrust-for-magento1">
+              https://github.com/utrustdev/utrust-for-magento1
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Magento 2
+          </td>
+          <td>
+            <a href="https://github.com/utrustdev/utrust-for-magento2">
+              https://github.com/utrustdev/utrust-for-magento2
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img alt="Prestashop logo" src="https://user-images.githubusercontent.com/1558992/70810397-97bc2080-1dbb-11ea-815a-32f389f3b0c3.png">
+          </td>
+          <td>
+            Prestashop
+          </td>
+          <td>
+            <a href="https://github.com/utrustdev/utrust-for-prestashop">
+              https://github.com/utrustdev/utrust-for-prestashop
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img alt="WooCommerce logo" src="https://user-images.githubusercontent.com/1558992/70810398-9854b700-1dbb-11ea-8127-d926450a8e62.png">
+          </td>
+          <td>
+            WooCommerce
+          </td>
+          <td>
+            <a href="https://github.com/utrustdev/utrust-for-woocommerce">
+              https://github.com/utrustdev/utrust-for-woocommerce
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-    Start accepting cryptocurrencies in your Magento 1 store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-magento1).
+    **Is your platform missing from this list?**
 
-    ## Magento 2
+    [Let us know](mailto:apiteam@utrust.com) so we can consider it in our
+    development roadmap.
 
-    ![Magento 2](https://user-images.githubusercontent.com/1558992/70810396-97bc2080-1dbb-11ea-8724-fb1ed032da18.png)
+    Alternatively, use our [API documentation](https://docs.api.utrust.com/) to
+    build the integration you need and join forces with us to foster an active
+    open-source community around Utrust.
 
-    Start accepting cryptocurrencies in your Magento 2 store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-magento2).
-
-    ## PrestaShop
-
-    ![Prestashop](https://user-images.githubusercontent.com/1558992/70810397-97bc2080-1dbb-11ea-815a-32f389f3b0c3.png)
-
-    Start accepting cryptocurrencies in your PrestaShop store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-prestashop).
-
-    ## WooCommerce
-
-    ![Woocommerce](https://user-images.githubusercontent.com/1558992/70810398-9854b700-1dbb-11ea-8127-d926450a8e62.png)
-
-    Start accepting cryptocurrencies in your WooCommerce store with our module hosted on [GitHub](https://github.com/utrustdev/utrust-for-woocommerce).
 
     # Libraries
 
