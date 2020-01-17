@@ -170,7 +170,7 @@ info:
 
     All tests went good and you want to move into production? To create a `production` account [go here](https://merchants.utrust.com/).
     You can sign up in production, but your account needs to be revised and enabled by the Utrust team.
-    If you need to add more users, please [let us know](mailto:support@utrust.com) and we will add them manually to the same Organization.
+    If you need to add more users, please <a href="mailto:support@utrust.com?subject=Need more users">let us know</a> and we will add them manually to the same Organization.
     You will have to generate your production credentials.
 
     ## 4. Webhook
@@ -281,7 +281,7 @@ info:
 
     **Is your platform missing from this list?**
 
-    [Let us know](mailto:apiteam@utrust.com) so we can consider it in our
+    <a href="mailto:apiteam@utrust.com?subject=Missing platform integration">Let us know</a> so we can consider it in our
     development roadmap.
 
     Alternatively, use our [API documentation](https://docs.api.utrust.com/) to
