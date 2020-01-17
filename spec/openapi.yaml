@@ -270,4 +270,10 @@ info:
     open-source community around Utrust.
 
 
+    # APIs
+    
+    Utrust provides two API's for your use: Stores API and Merchants API.
+    
+    [Utrust API Reference →](https://docs.api.utrust.com)
+
 paths: false
