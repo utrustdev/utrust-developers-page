@@ -219,7 +219,7 @@ info:
       <thead>
         <tr>
           <th colspan="2">Platform</th>
-          <th>Repository</th>
+          <th>Marketplace or Repository</th>
         </tr>
       </thead>
       <tbody>
@@ -232,7 +232,7 @@ info:
           </td>
           <td>
             <a href="https://github.com/utrustdev/utrust-for-magento1">
-              https://github.com/utrustdev/utrust-for-magento1
+              https://marketplace.magento.com/utrust-utrust-payment.html
             </a>
           </td>
         </tr>
@@ -242,7 +242,7 @@ info:
           </td>
           <td>
             <a href="https://github.com/utrustdev/utrust-for-magento2">
-              https://github.com/utrustdev/utrust-for-magento2
+              https://marketplace.magento.com/utrust-utrust-payment.html
             </a>
           </td>
         </tr>
