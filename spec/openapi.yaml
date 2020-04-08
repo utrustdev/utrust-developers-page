@@ -43,7 +43,7 @@ info:
     In more detail, this flow has 6 stages:
 
     <div style="max-width: 650px; margin: 28px auto;">
-      <img src="https://user-images.githubusercontent.com/1558992/78818496-aa8edc80-79cc-11ea-95bf-c3ab1f4f3ac1.png" alt="Checkout process diagram" />
+      <img src="https://user-images.githubusercontent.com/1558992/78818774-1bce8f80-79cd-11ea-9094-04189040ca52.png" alt="Checkout process diagram" />
     </div>
 
     1. [**Merchant**] On checkout, the merchant system sends the order details to
