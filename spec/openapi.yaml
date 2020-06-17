@@ -20,8 +20,6 @@ info:
 
     Be aware Utrust Payments have the following limitations:
 
-    > 💵 You can only create orders in **EUR, GBP or USD** (and you must choose one!);
-
     > ⏰ Our payment confirmation can take **up to 2 hours**;
 
     > 🌍 Our Payment Widget is only available in **English**.
@@ -323,6 +321,5 @@ info:
 
     For more details, check the [Utrust API
     Reference](https://docs.api.utrust.com).
-
 
 paths: false
