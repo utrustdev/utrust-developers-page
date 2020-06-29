@@ -301,6 +301,14 @@ info:
             </a>
           </td>
         </tr>
+        <tr>
+          <td>CFML</td>
+          <td>
+            <a href="https://github.com/GaryStanton/UtrustCFML">
+              https://github.com/GaryStanton/UtrustCFML (built by Gary Stanton)
+            </a>
+          </td>
+        </tr>
       </tbody>
     </table>
 
