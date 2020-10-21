@@ -229,8 +229,8 @@ info:
             Magento 1
           </td>
           <td>
-            <a href="https://marketplace.magento.com/utrust-utrust-payment.html">
-              https://marketplace.magento.com/utrust-utrust-payment.html
+            <a href="https://github.com/utrustdev/utrust-for-magento1">
+              GitHub repo
             </a>
           </td>
         </tr>
@@ -240,20 +240,41 @@ info:
           </td>
           <td>
             <a href="https://marketplace.magento.com/utrust-module-payment.html">
-              https://marketplace.magento.com/utrust-module-payment.html
+              Magento marketplace
+            </a>
+            or
+            <a href="https://github.com/utrustdev/utrust-for-magento2">
+              GitHub repo
             </a>
           </td>
         </tr>
         <tr>
           <td>
-            <img alt="Prestashop logo" src="https://user-images.githubusercontent.com/1558992/70810397-97bc2080-1dbb-11ea-815a-32f389f3b0c3.png">
+            <img alt="OpenCart logo" src="https://user-images.githubusercontent.com/1558992/96702918-26a9aa00-138a-11eb-9cb6-cb26e93e09c7.png">
           </td>
           <td>
-            Prestashop
+            OpenCart 3
+          </td>
+          <td>
+            <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40369&filter_search=utrust&filter_license=0">
+              OpenCart marketplace
+            </a>
+            or 
+            <a href="https://github.com/digito-solutions/Plugin-Utrust-Opencart-3">
+              GitHub repo (by Digito Solutions)
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img alt="PrestaShop logo" src="https://user-images.githubusercontent.com/1558992/70810397-97bc2080-1dbb-11ea-815a-32f389f3b0c3.png">
+          </td>
+          <td>
+            PrestaShop 1.6
           </td>
           <td>
             <a href="https://github.com/utrustdev/utrust-for-prestashop">
-              https://github.com/utrustdev/utrust-for-prestashop
+              GitHub repo
             </a>
           </td>
         </tr>
@@ -262,11 +283,15 @@ info:
             <img alt="WooCommerce logo" src="https://user-images.githubusercontent.com/1558992/70810398-9854b700-1dbb-11ea-8127-d926450a8e62.png">
           </td>
           <td>
-            WooCommerce
+            WooCommerce 3
           </td>
           <td>
+            <a href="https://wordpress.org/plugins/utrust-for-woocommerce/">
+              Wordpress marketplace
+            </a>
+            or
             <a href="https://github.com/utrustdev/utrust-for-woocommerce">
-              https://github.com/utrustdev/utrust-for-woocommerce
+              GitHub repo
             </a>
           </td>
         </tr>
