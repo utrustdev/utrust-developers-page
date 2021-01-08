@@ -222,6 +222,19 @@ info:
       </thead>
       <tbody>
         <tr>
+          <td>
+            <img alt="Jumpseller logo" src="https://user-images.githubusercontent.com/6796936/99388760-fb08d980-28cd-11eb-9466-581ae0a47c88.png">
+          </td>
+          <td>
+            Jumpseller
+          </td>
+          <td>
+            <a href="https://gist.github.com/danielmcoelho/4c78184ddc22688a7dde5b252292c75b">
+              GitHub gist
+            </a>
+          </td>
+        </tr>
+        <tr>
           <td rowspan="2">
             <img alt="Magento logo" src="https://user-images.githubusercontent.com/1558992/70810396-97bc2080-1dbb-11ea-8724-fb1ed032da18.png">
           </td>
@@ -280,10 +293,27 @@ info:
         </tr>
         <tr>
           <td>
+            <img alt="WHMCS logo" src="https://user-images.githubusercontent.com/1558992/104025764-03d6a700-51bd-11eb-9f69-63ed865bfda7.png">
+          </td>
+          <td>
+            WHMCS
+          </td>
+          <td>
+            <a href="https://marketplace.whmcs.com/product/5733-utrust-for-whmcs">
+              WHMCS marketplace
+            </a>
+            or
+            <a href="https://github.com/utrustdev/utrust-for-whmcs">
+              GitHub repo
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
             <img alt="WooCommerce logo" src="https://user-images.githubusercontent.com/1558992/70810398-9854b700-1dbb-11ea-8127-d926450a8e62.png">
           </td>
           <td>
-            WooCommerce 3
+            WooCommerce
           </td>
           <td>
             <a href="https://wordpress.org/plugins/utrust-for-woocommerce/">
@@ -295,19 +325,7 @@ info:
             </a>
           </td>
         </tr>
-        <tr>
-          <td>
-            <img alt="Jumpseller logo" src="https://user-images.githubusercontent.com/6796936/99388760-fb08d980-28cd-11eb-9466-581ae0a47c88.png">
-          </td>
-          <td>
-            Jumpseller
-          </td>
-          <td>
-            <a href="https://gist.github.com/danielmcoelho/4c78184ddc22688a7dde5b252292c75b">
-              GitHub gist
-            </a>
-          </td>
-        </tr>
+        
       </tbody>
     </table>
 
