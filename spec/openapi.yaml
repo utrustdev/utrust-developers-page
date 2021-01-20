@@ -353,7 +353,7 @@ info:
           <td>PHP</td>
           <td>
             <a href="https://github.com/utrustdev/utrust-php">
-              https://github.com/utrustdev/utrust-php
+              utrust-php
             </a>
           </td>
         </tr>
@@ -361,7 +361,15 @@ info:
           <td>CFML</td>
           <td>
             <a href="https://github.com/GaryStanton/UtrustCFML">
-              https://github.com/GaryStanton/UtrustCFML (maintained by Gary Stanton)
+              UtrustCFML (maintained by Gary Stanton)
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Typescript</td>
+          <td>
+            <a href="https://github.com/utrustdev/utrust-ts-library">
+              utrust-ts-library
             </a>
           </td>
         </tr>
