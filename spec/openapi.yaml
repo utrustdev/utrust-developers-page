@@ -217,7 +217,7 @@ info:
       <thead>
         <tr>
           <th colspan="2">Platform</th>
-          <th>Marketplace or Repository</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -230,7 +230,7 @@ info:
           </td>
           <td>
             <a href="https://gist.github.com/danielmcoelho/4c78184ddc22688a7dde5b252292c75b">
-              GitHub gist
+              Instructions
             </a>
           </td>
         </tr>
@@ -243,7 +243,7 @@ info:
           </td>
           <td>
             <a href="https://github.com/utrustdev/utrust-for-magento1">
-              GitHub repo
+              Download
             </a>
           </td>
         </tr>
@@ -257,7 +257,7 @@ info:
             </a>
             or
             <a href="https://github.com/utrustdev/utrust-for-magento2">
-              GitHub repo
+              Download
             </a>
           </td>
         </tr>
@@ -274,7 +274,20 @@ info:
             </a>
             or 
             <a href="https://github.com/digito-solutions/Plugin-Utrust-Opencart-3">
-              GitHub repo (by Digito Solutions)
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img alt="Payrexx logo" src="https://user-images.githubusercontent.com/1558992/107674377-d33bce80-6c8e-11eb-8bea-020eea13ade4.png">
+          </td>
+          <td>
+            Payrexx
+          </td>
+          <td>
+            <a href="https://gist.github.com/danielmcoelho/be83a552c5c65f937f984c169c6d3c9c">
+              Instructions
             </a>
           </td>
         </tr>
@@ -287,7 +300,7 @@ info:
           </td>
           <td>
             <a href="https://github.com/utrustdev/utrust-for-prestashop">
-              GitHub repo
+              Download
             </a>
           </td>
         </tr>
@@ -304,7 +317,7 @@ info:
             </a>
             or
             <a href="https://github.com/utrustdev/utrust-for-whmcs">
-              GitHub repo
+              Download
             </a>
           </td>
         </tr>
@@ -321,7 +334,7 @@ info:
             </a>
             or
             <a href="https://github.com/utrustdev/utrust-for-woocommerce">
-              GitHub repo
+              Download
             </a>
           </td>
         </tr>
