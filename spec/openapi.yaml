@@ -131,22 +131,20 @@ info:
     Remember Production is a separate environment, your real merchant account
     won't exist in Sandbox (but here you can have many).
 
-    ![Merchant_Dashboard_signup](https://user-images.githubusercontent.com/1558992/70264271-07b12200-1790-11ea-810a-dafcc0b0d56f.png)
+    ![Merchant_Dashboard_signup](https://user-images.githubusercontent.com/1558992/108076795-ba069980-7063-11eb-9458-815645fe4c96.png)
 
 
     ### 3.3. Authentication
 
-    Upon sign up, you will receive an email with the access information. You
-    must then generate credentials for your store, which can be done through
-    your Utrust Merchant Dashboard. In there, go to the Organization Settings
-    section and click on the _Generate Credentials_ button.
+    You must then generate credentials for your store, which can be done through
+    your Utrust Merchant Dashboard. In there, go to the Integrations section, choose _Custom_ and click on the _Generate Credentials_ button.
 
-    ![Merchant_dashboard_organization](https://user-images.githubusercontent.com/1558992/70264272-07b12200-1790-11ea-989d-9ea206e32874.png)
+    ![Merchant_dashboard_organization](https://user-images.githubusercontent.com/1558992/108076806-bc68f380-7063-11eb-912f-715b133741e9.png)
 
     You’ll then be shown the `API Key` and `Webhooks Secret` for your store.
     This information will not visible afterwards, make sure to save it.
 
-    ![Merchant_dasboard_new_credentials](https://user-images.githubusercontent.com/1558992/70264273-07b12200-1790-11ea-91c5-70ca1b2ef16b.png)
+    ![Merchant_dasboard_new_credentials](https://user-images.githubusercontent.com/1558992/108076808-bd018a00-7063-11eb-9745-adf69174a87c.png)
 
 
     ### 3.4. Creating the order
