@@ -161,12 +161,27 @@ info:
     ### 3.5. Going into production
 
     All tests went good and you want to move into production? To create a `production` account [go here](https://merchants.utrust.com/).
-    You can sign up in production, but your account needs to be revised and enabled by the Utrust team.
+    You will have to generate your production API Key and Webhook secret in the Integrations page.
     If you need to add more users, please <a href="mailto:support@utrust.com?subject=Need more users">let us know</a> and we will add them manually to the same Organization.
-    You will have to generate your production credentials.
 
 
-    ## 4. Webhooks
+    ## 4. Checkout suggestions
+
+    To increase conversions on the checkout page, we suggest you to add the following:
+    - **Payment method name**: “Pay with Crypto” (with Utrust logo placed right or below) or “Utrust — Pay with Cryptocurrencies” (if it’s not possible to add the Utrust logo)
+    - **Description/Instructions**: “You will be redirected to the Utrust payment widget compatible with any major crypto wallets. It will allow you to pay for your purchase in a safe and seamless way using Bitcoin, Ethereum, Tether or a number of other currencies.”
+    - **Utrust checkout logo**: Download the merchant kit [here](https://drive.google.com/file/d/1j25uOPfZv5iBzNShpgwbaDZBG51GGQBJ/view?usp=sharing).
+
+    Example with the Utrust logo:
+
+    <img alt="Checkout with Utrust logo" style="max-width: 500px" src="https://user-images.githubusercontent.com/1558992/108376251-b5c0b480-71fa-11eb-8292-2bed3e7853e6.png" />
+
+    Example without the Utrust logo:
+
+    <img alt="Checkout without Utrust logo" style="max-width: 500px" src="https://user-images.githubusercontent.com/1558992/108376259-b78a7800-71fa-11eb-83ec-d763dd99ee9c.png" />
+
+
+    ## 5. Webhooks
 
     Merchant systems can be notified of events in the Utrust platform through
     webhooks. At the moment these events include:
@@ -196,13 +211,6 @@ info:
     For manual validation instructions, and further technical details, check
     the [Webhooks](https://docs.api.utrust.com/#tag/Webhooks) section in the
     [Utrust API](https://docs.api.utrust.com) documentation.
-
-
-    ## 5. Assets
-
-    The Utrust Merchant assets kit includes everything for using the official
-    Utrust branding in your website. Download it
-    [here](https://drive.google.com/file/d/1j25uOPfZv5iBzNShpgwbaDZBG51GGQBJ/view?usp=sharing).
 
 
 
