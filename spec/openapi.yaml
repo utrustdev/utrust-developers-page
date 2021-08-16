@@ -68,9 +68,12 @@ info:
     Any wallet will do, but we recommend using
     [MetaMask](https://metamask.io/) due to its ease of use.
     After installing, make sure to change to the Ropsten Test Network, which
-    is what we use in our sandbox environment.
+    is what we use in our sandbox environment. 
 
-    ![MetaMask_wallet](https://user-images.githubusercontent.com/1558992/70264200-e94b2680-178f-11ea-8212-885c5235c553.png)
+    Get some ETH in MetaMask by clicking in "Buy" and "Get Ether". 
+    If that faucet doesn't work (sometimes it throws an error) try [this](https://faucet.dimensions.network/).
+
+    ![MetaMask_wallet](https://user-images.githubusercontent.com/1558992/129576462-6dd739d5-5fde-423b-8f0e-fd2b55540e65.png)
 
     When you are ready, go to our [Sandbox online store](https://sandbox.store.utrust.com)
     and give it a spin by selecting an item and proceeding to checkout.
