@@ -172,6 +172,10 @@ info:
 
     To increase conversions on the checkout page, we suggest you to add the following:
     - **Payment method name**: “Pay with Crypto” (with Utrust logo placed right or below) or “Utrust — Pay with Cryptocurrencies” (if it’s not possible to add the Utrust logo)
+      
+      Have in mind the correct way to spell "Utrust":
+
+      <img alt="How to write Utrust" style="max-width: 350px" src="https://user-images.githubusercontent.com/1558992/133260896-9fdce2c2-c997-4cac-8d99-ca673cd1c9c4.png" />
     - **Description/Instructions**: “You will be redirected to the Utrust payment widget compatible with any major crypto wallets. It will allow you to pay for your purchase in a safe and seamless way using Bitcoin, Ethereum, Tether or a number of other currencies.”
     - **Utrust checkout logo**: Download the merchant kit [here](https://drive.google.com/file/d/1j25uOPfZv5iBzNShpgwbaDZBG51GGQBJ/view?usp=sharing).
 
