@@ -20,7 +20,7 @@ info:
 
     Be aware Utrust Payments have the following limitations:
 
-    > ⏰ Our payment confirmation can take **up to 2 hours**;
+    > ⏰ Our payment confirmation can take **up to 2h30**;
 
     > 🌍 Our Payment Widget is only available in **English**.
 
@@ -64,42 +64,42 @@ info:
     ## 2. Try our flow
 
     The best way to learn about what we do is by trying it out yourself. For
-    this you need an Ethereum wallet and some "test" money.
-    Any wallet will do, but we recommend using
-    [MetaMask](https://metamask.io/) due to its ease of use.
-    After installing, make sure to change to the Ropsten Test Network, which
-    is what we use in our sandbox environment. 
+    this, we recommend you to use [Elrond testnet wallet](https://devnet-wallet.elrond.com/) 
+    with some "fake" EGLD.
+    After creating your wallet, go to "Faucet" and click "Request tokens". This 
+    should get you 10 xEGLD (which is the fake EGLD you will need). 
 
-    Get some ETH in MetaMask by clicking in "Buy" and "Get Ether". 
-    If that faucet doesn't work (sometimes it throws an error) try [this](https://faucet.dimensions.network/).
+    ![Elrond_devnet_wallet](https://user-images.githubusercontent.com/1558992/149547677-b38aa7cd-f76a-48a7-9d9a-6c3dfa755915.png)
 
-    ![MetaMask_wallet](https://user-images.githubusercontent.com/1558992/129576462-6dd739d5-5fde-423b-8f0e-fd2b55540e65.png)
+    You can also use [MetaMask](https://metamask.io/) with some fake ETH, just make sure to change to the Ropsten Test Network, which
+    is what we use in our sandbox environment.
 
     When you are ready, go to our [Sandbox online store](https://sandbox.store.utrust.com)
     and give it a spin by selecting an item and proceeding to checkout.
     Choose the Utrust payment method.
     Once you proceed to the payment, you will see Utrust Payment Widget.
 
-    ![Utrust_payment_widget_on_sandbox_store](https://user-images.githubusercontent.com/1558992/70264232-f700ac00-178f-11ea-8b21-5c3708efcb3d.png)
+    ![Utrust_payment_widget_on_sandbox_store](https://user-images.githubusercontent.com/1558992/149548894-6dd70a22-42d2-4e1c-bb7d-71b2f2fccbd6.png)
 
-    Select the ETH currency. The widget will then show you a QR Code with the
-    payment details. If using Metamask, change to the Manual tab, and copy the
-    address.
+    Select the EGLD currency. The widget will then show you a QR Code with the
+    payment details. Change to the Manual tab, and copy the
+    address and amount.
 
-    ![Utrust_payment_widget_awaiting](https://user-images.githubusercontent.com/1558992/70264267-07188b80-1790-11ea-816b-bf4e0839f7d4.png)
+    ![Utrust_payment_widget_awaiting](https://user-images.githubusercontent.com/1558992/149549343-d26a27a2-7dd1-4d1e-b8fe-c3f7cf3d880a.png)
 
-    Open Metamask, and send the shown value in ETH to the provided address.
+    Open Elrond wallet and send the amount in xEGLD to the provided address.
 
-    ![MetaMask_filled](https://user-images.githubusercontent.com/1558992/70264269-07188b80-1790-11ea-9655-e162e90f6d3b.png)
+    ![Elrond_wallet_filled](https://user-images.githubusercontent.com/1558992/149549605-b1c90744-1685-46ae-8c46-f7a4263aaeff.png)
 
     Wait some seconds, and the widget should change to show the payment is
     complete.
 
-    ![Utrust_payment_widget_completed](https://user-images.githubusercontent.com/1558992/70264270-07188b80-1790-11ea-98dd-d0f3d45d7f28.png)
+    ![Utrust_payment_widget_completed](https://user-images.githubusercontent.com/1558992/149550262-51546312-29db-4b29-a65a-0a56d5a1dbce.png)
 
-    This is not a payment confirmation yet, but it's a good indication that the
-    payment will go through. However, only when we have a real confirmation will
-    we send you the notifications, via [webhook](#section/Basics/4.-Webhook). 
+    For EGLD, the payment is complete because transactions are confirmed very 
+    fast. For other cryptocurrencies, it can take some minutes to confirm. Either 
+    way, the confirmation notification will we delivered to the merchant server, 
+    via [webhook](#section/Basics/4.-Webhook). 
 
 
     ## 3. Build the order
