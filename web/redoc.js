@@ -30,7 +30,7 @@ const options = {
 
 const removePoweredByReDoc = () => {
   const aTags = document.getElementsByTagName("a");
-  const searchText = "Documentation Powered by ReDoc";
+  const searchText = "Documentation Powered by Redocly";
   var found;
   for (var i = 0; i < aTags.length; i++) {
     if (aTags[i].textContent == searchText) {
