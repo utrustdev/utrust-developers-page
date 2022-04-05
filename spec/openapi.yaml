@@ -67,7 +67,8 @@ info:
     this, we recommend you to use [Elrond testnet wallet](https://devnet-wallet.elrond.com/) 
     with some "fake" EGLD.
     After creating your wallet, go to "Faucet" and click "Request tokens". This 
-    should get you 10 xEGLD (which is the fake EGLD you will need). 
+    should get you 10 xEGLD (which is the fake EGLD you will need).
+    If that faucet is not working, you can try ![this one](https://r3d4.fr/faucet).
 
     ![Elrond_devnet_wallet](https://user-images.githubusercontent.com/1558992/149547677-b38aa7cd-f76a-48a7-9d9a-6c3dfa755915.png)
 
