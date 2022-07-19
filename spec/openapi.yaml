@@ -306,16 +306,21 @@ info:
           </td>
         </tr>
         <tr>
-          <td>
+          <td rowspan="2">
             <img alt="PrestaShop logo" src="https://user-images.githubusercontent.com/1558992/70810397-97bc2080-1dbb-11ea-815a-32f389f3b0c3.png">
           </td>
           <td>
             PrestaShop 1.6
           </td>
-          <td>
+          <td rowspan="2">
             <a href="https://github.com/utrustdev/utrust-for-prestashop">
               Download
             </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            PrestaShop 1.7
           </td>
         </tr>
         <tr>
