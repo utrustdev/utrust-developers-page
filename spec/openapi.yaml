@@ -236,19 +236,6 @@ info:
       </thead>
       <tbody>
         <tr>
-          <td>
-            <img alt="Jumpseller logo" src="https://user-images.githubusercontent.com/6796936/99388760-fb08d980-28cd-11eb-9466-581ae0a47c88.png">
-          </td>
-          <td>
-            Jumpseller
-          </td>
-          <td>
-            <a href="https://gist.github.com/danielmcoelho/4c78184ddc22688a7dde5b252292c75b">
-              Instructions
-            </a>
-          </td>
-        </tr>
-        <tr>
           <td rowspan="2">
             <img alt="Magento logo" src="https://user-images.githubusercontent.com/1558992/70810396-97bc2080-1dbb-11ea-8724-fb1ed032da18.png">
           </td>
