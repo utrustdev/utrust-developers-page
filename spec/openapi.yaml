@@ -45,7 +45,7 @@ info:
     </div>
 
     1. [**Merchant**] On checkout, the merchant system sends the order details to
-       create it on our server, getting a `redirect_url` in the response 
+       create it on our server, getting a `redirect_url` in the response
        (see [the create order endpoint](https://docs.api.utrust.com/#operation/createOrder)).
     2. [**Merchant**] Redirects users to the provided URL, which shows them the
        Utrust Payment widget.
@@ -64,9 +64,9 @@ info:
     ## 2. Try our flow
 
     The best way to learn about what we do is by trying it out yourself. For
-    this, we recommend you to use [Elrond testnet wallet](https://devnet-wallet.elrond.com/) 
-    with some "fake" EGLD.
-    After creating your wallet, go to "Faucet" and click "Request tokens". This 
+    this, we recommend you to use [Elrond devnet wallet](https://devnet-wallet.elrond.com/)
+    with some "fake" EGLD (notice Devnet instead of Testnet).
+    After creating your wallet, go to "Faucet" and click "Request tokens". This
     should get you 10 xEGLD (which is the fake EGLD you will need).
     If that faucet is not working, you can try [this one](https://r3d4.fr/faucet).
 
@@ -97,10 +97,10 @@ info:
 
     ![Utrust_payment_widget_completed](https://user-images.githubusercontent.com/1558992/149550262-51546312-29db-4b29-a65a-0a56d5a1dbce.png)
 
-    For EGLD, the payment is complete because transactions are confirmed very 
-    fast. For other cryptocurrencies, it can take some minutes to confirm. Either 
-    way, the confirmation notification will we delivered to the merchant server, 
-    via [webhook](#section/Basics/4.-Webhook). 
+    For EGLD, the payment is complete because transactions are confirmed very
+    fast. For other cryptocurrencies, it can take some minutes to confirm. Either
+    way, the confirmation notification will we delivered to the merchant server,
+    via [webhook](#section/Basics/4.-Webhook).
 
 
     ## 3. Build the order
@@ -173,7 +173,7 @@ info:
 
     To increase conversions on the checkout page, we suggest you to add the following:
     - **Payment method name**: “Pay with Crypto” or “Utrust — Pay with Cryptocurrencies” (if it’s not possible to add the Utrust logo)
-      
+
       Have in mind the correct way to spell "Utrust":
 
       <img alt="How to write Utrust" style="max-width: 350px" src="https://user-images.githubusercontent.com/1558992/133260896-9fdce2c2-c997-4cac-8d99-ca673cd1c9c4.png" />
@@ -273,7 +273,7 @@ info:
             <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40369&filter_search=utrust&filter_license=0">
               OpenCart marketplace
             </a>
-            or 
+            or
             <a href="https://github.com/digito-solutions/Plugin-Utrust-Opencart-3">
               Download
             </a>
