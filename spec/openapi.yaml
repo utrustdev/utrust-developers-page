@@ -73,7 +73,7 @@ info:
 
     ![Elrond_devnet_wallet](https://user-images.githubusercontent.com/1558992/149547677-b38aa7cd-f76a-48a7-9d9a-6c3dfa755915.png)
 
-    You can also use [MetaMask](https://metamask.io/) with some fake ETH, just make sure to change to the Ropsten Test Network, which
+    You can also use [MetaMask](https://metamask.io/) with some fake ETH, just make sure to change to the Göerli Test Network, which
     is what we use in our sandbox environment.
 
     When you are ready, go to our [Sandbox online store](https://sandbox.store.utrust.com)
