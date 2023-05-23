@@ -2,23 +2,23 @@ openapi: 3.0.0
 info:
   x-logo:
     backgroundColor: "#FAFAFA"
-    url: "https://user-images.githubusercontent.com/1558992/70795610-18692580-1d98-11ea-89da-619df14eed53.png"
-  title: Utrust for Developers
+    url: "docs_logo.png"
+  title: xMoney for Developers
   description: |
-    Welcome to the Utrust documentation for Developers. Here you will find
+    Welcome to the xMoney documentation for Developers. Here you will find
     everything you need to start accepting crypto payments in your online store
-    or website easily with Utrust.
+    or website easily with xMoney.
 
 
     # Basics
 
     In this section you can find a set of concepts that will help you understand
-    how Utrust handles payments, so that you can integrate our payment method
+    how xMoney handles payments, so that you can integrate our payment method
     without any trouble.
 
     ## 0. Before you start
 
-    Be aware Utrust Payments have the following limitations:
+    Be aware xMoney Payments have the following limitations:
 
     > ⏰ Our payment confirmation can take **up to 2h30**;
 
@@ -41,21 +41,21 @@ info:
     In more detail, this flow has 6 stages:
 
     <div style="max-width: 650px; margin: 28px auto;">
-      <img src="customer_pays.png" alt="Checkout process diagram" />
+      <img src="diagram.png" alt="Checkout process diagram" />
     </div>
 
     1. [**Merchant**] On checkout, the merchant system sends the order details to
        create it on our server, getting a `redirect_url` in the response
-       (see [the create order endpoint](https://docs.api.utrust.com/#operation/createOrder)).
+       (see [the create order endpoint](https://docs.api.crypto.xmoney.com/#operation/createOrder)).
     2. [**Merchant**] Redirects users to the provided URL, which shows them the
-       Utrust Payment widget.
-    3. [**Utrust**] Users pay for the order, seeing a "Payment Complete"
-       message. Utrust also sends them an email with the detected payment
+       xMoney Payment widget.
+    3. [**xMoney**] Users pay for the order, seeing a "Payment Complete"
+       message. xMoney also sends them an email with the detected payment
        details. This completes the user interaction.
-    4. [**Utrust**] Redirects the customer back to the `return_url` provided
+    4. [**xMoney**] Redirects the customer back to the `return_url` provided
        when the order was created.
-    5. [**Utrust**] It takes some time to confirm transactions (minutes or hours,
-       depending on the blockchain). Once confirmed, Utrust sends an HTTP
+    5. [**xMoney**] It takes some time to confirm transactions (minutes or hours,
+       depending on the blockchain). Once confirmed, xMoney sends an HTTP
        request to the Merchant system notifying the payment was received.
     6. [**Store**] Verifies and validates the request, and, if valid, finalizes
        the order.
@@ -76,18 +76,19 @@ info:
     You can also use [MetaMask](https://metamask.io/) with some fake ETH, just make sure to change to the Göerli Test Network, which
     is what we use in our sandbox environment.
 
-    When you are ready, go to our [Sandbox online store](https://sandbox.store.utrust.com)
+    When you are ready, go to our [Sandbox online store](https://sandbox.store.crypto.xmoney.com)
     and give it a spin by selecting an item and proceeding to checkout.
-    Choose the Utrust payment method.
-    Once you proceed to the payment, you will see Utrust Payment Widget.
+    Choose the xMoney payment method.
+    Once you proceed to the payment, you will see xMoney Payment Widget.
 
-    ![Utrust_payment_widget_on_sandbox_store](https://user-images.githubusercontent.com/1558992/149548894-6dd70a22-42d2-4e1c-bb7d-71b2f2fccbd6.png)
+    ![xMoney_payment_widget_email_constent](widget/01–widget–email_consent.png)
+    ![xMoney_payment_widget_on_sandbox_store](widget/02–widget–method.png)
 
     Select the EGLD currency. The widget will then show you a QR Code with the
     payment details. Change to the Manual tab, and copy the
     address and amount.
 
-    ![Utrust_payment_widget_awaiting](https://user-images.githubusercontent.com/1558992/149549343-d26a27a2-7dd1-4d1e-b8fe-c3f7cf3d880a.png)
+    ![xMoney_payment_widget_awaiting](https://user-images.githubusercontent.com/1558992/149549343-d26a27a2-7dd1-4d1e-b8fe-c3f7cf3d880a.png)
 
     Open Elrond wallet and send the amount in xEGLD to the provided address.
 
@@ -96,7 +97,7 @@ info:
     Wait some seconds, and the widget should change to show the payment is
     complete.
 
-    ![Utrust_payment_widget_completed](https://user-images.githubusercontent.com/1558992/149550262-51546312-29db-4b29-a65a-0a56d5a1dbce.png)
+    ![xMoney_payment_widget_completed](https://user-images.githubusercontent.com/1558992/149550262-51546312-29db-4b29-a65a-0a56d5a1dbce.png)
 
     For EGLD, the payment is complete because transactions are confirmed very
     fast. For other cryptocurrencies, it can take some minutes to confirm. Either
@@ -112,7 +113,7 @@ info:
 
     ### 3.1. Sandbox and Production
 
-    In addition to the real-world payment processing environment, Utrust offers
+    In addition to the real-world payment processing environment, xMoney offers
     developers an environment where they can test their integration using
     not-so-valuable test money. We call these environments Production and
     Sandbox, respectively.
@@ -126,51 +127,51 @@ info:
 
     Depending on which environment they want to target, developers must choose
     the appropriate hostname to target their requests. Production uses the
-    `utrust.com` domain, whereas Sandbox uses the `sandbox-utrust.com` domain.
+    `crypto.xmoney.com` domain, whereas Sandbox uses the `sandbox.crypto.xmoney.com` domain.
 
 
     ### 3.2. Sign up for Sandbox
 
     To use our Sandbox environment
-    [first you need a merchant account](https://merchants.sandbox-utrust.com/onboarding/sign-up).
+    [first you need a merchant account](https://merchants.sandbox.crypto.xmoney.com/onboarding/sign-up).
     Remember Production is a separate environment, your real merchant account
     won't exist in Sandbox (but here you can have many).
 
-    ![Merchant_Dashboard_signup](https://user-images.githubusercontent.com/1558992/108076795-ba069980-7063-11eb-9458-815645fe4c96.png)
+    ![Merchant_Dashboard_signup](md/01-md-sign_up.png)
 
 
     ### 3.3. Authentication
 
     You must then generate credentials for your store, which can be done through
-    your Utrust Merchant Dashboard. In there, go to the Integrations section, choose _Custom_ and click on the _Generate Credentials_ button.
+    your xMoney Merchant Dashboard. In there, go to the Integrations section, choose _Custom_ and click on the _Generate Credentials_ button.
 
-    ![Merchant_dashboard_organization](https://user-images.githubusercontent.com/1558992/108076806-bc68f380-7063-11eb-912f-715b133741e9.png)
+    ![Merchant_dashboard_organization](md/02-md-integrations.png)
 
     You’ll then be shown the `API Key` and `Webhooks Secret` for your store.
     This information will not visible afterwards, make sure to save it.
 
-    ![Merchant_dasboard_new_credentials](https://user-images.githubusercontent.com/1558992/108076808-bd018a00-7063-11eb-9745-adf69174a87c.png)
+    ![Merchant_dasboard_new_credentials](md/03-md-credential_confirmation.png)
 
 
     ### 3.4. Creating the order
 
-    Orders are base concept to process payments in Utrust. To process a payment
+    Orders are base concept to process payments in xMoney. To process a payment
     the system must first call the
-    [create order endpoint](https://docs.api.utrust.com/#operation/createOrder).
+    [create order endpoint](https://docs.api.crypto.xmoney.com/#operation/createOrder).
 
     The response will then contain a URL to which users must be redirected. When
-    the payment is processed Utrust redirects the user back to the system, using
+    the payment is processed xMoney redirects the user back to the system, using
     the URLs provided.
 
 
     ### 3.5. Going into production
 
-    All tests went good and you want to move into production? To create a `production` account [go here](https://merchants.utrust.com/).
+    All tests went good and you want to move into production? To create a `production` account [go here](https://merchants.crypto.xmoney.com/).
     You will have to generate your production API Key and Webhook secret in the Integrations page.
-    If you need to add more users, please <a href="mailto:support@utrust.com?subject=Need more users">let us know</a> and we will add them manually to the same Organization.
+    If you need to add more users, please <a href="mailto:support@xmoney.com?subject=Need more users">let us know</a> and we will add them manually to the same Organization.
 
 
-    ## 4. Checkout suggestions
+    ## 4. Checkout suggestions (Depricated)
 
     To increase conversions on the checkout page, we suggest you to add the following:
     - **Payment method name**: “Pay with Crypto” or “Utrust — Pay with Cryptocurrencies” (if it’s not possible to add the Utrust logo)
@@ -192,7 +193,7 @@ info:
 
     ## 5. Webhooks
 
-    Merchant systems can be notified of events in the Utrust platform through
+    Merchant systems can be notified of events in the xMoney platform through
     webhooks. At the moment these events include:
 
     - Confirmation of the order payment;
@@ -203,12 +204,12 @@ info:
 
     All webhook requests are expected to respond with HTTP status 2xx in case
     of success. Any other status code, or the lack of a response, will be
-    considered a failure. In that case Utrust will retry up to 15 times with an
+    considered a failure. In that case xMoney will retry up to 15 times with an
     exponential back off following a Fibonacci sequence -- first retry happens
     after 1 minute, second happens 2 minutes after the first one, third happens
     3 minutes after the second one, etc.
 
-    All requests sent by Utrust to the provided URL are signed for validation
+    All requests sent by xMoney to the provided URL are signed for validation
     using the `Webhooks Secret` generated (see [3.3
     Authetication](#33-authentication)).
 
@@ -218,14 +219,14 @@ info:
     validate the requests.
 
     For manual validation instructions, and further technical details, check
-    the [Webhooks](https://docs.api.utrust.com/#tag/Webhooks) section in the
-    [Utrust API](https://docs.api.utrust.com) documentation.
+    the [Webhooks](https://docs.api.crypto.xmoney.com/#tag/Webhooks) section in the
+    [xMoney API](https://docs.api.crypto.xmoney.com) documentation.
 
 
 
     # Integrations
 
-    Utrust develops and maintains plugins for some of the most popular
+    xMoney develops and maintains plugins for some of the most popular
     e-commerce solutions.
 
     <table>
@@ -319,7 +320,7 @@ info:
             Shopify
           </td>
           <td>
-            <a href="https://utrust.com/shopify/">
+            <a href="https://xmoney.com/shopify/">
               Apply here
             </a>
           </td>
@@ -380,9 +381,9 @@ info:
     <a href="mailto:integrations@utrust.com?subject=Missing platform integration">Let us know</a> so we can consider it in our
     development roadmap.
 
-    Alternatively, use our [API documentation](https://docs.api.utrust.com/) to
+    Alternatively, use our [API documentation](https://docs.api.crypto.xmoney.com/) to
     build the integration you need and join forces with us to foster an active
-    open-source community around Utrust.
+    open-source community around xMoney.
 
 
     # Libraries
@@ -427,17 +428,17 @@ info:
     <a href="mailto:integrations@utrust.com?subject=Missing language library">Let us
     know</a> so we can consider it in our development roadmap.
 
-    Alternatively, use our [API documentation](https://docs.api.utrust.com/) to
+    Alternatively, use our [API documentation](https://docs.api.crypto.xmoney.com/) to
     build the library you need and join forces with us to foster an active
-    open-source community around Utrust.
+    open-source community around xMoney.
 
 
     # APIs
 
-    The Utrust platform provides public APIs that you can use to build your
+    The xMoney platform provides public APIs that you can use to build your
     own tools around our ecosystem.
 
-    For more details, check the [Utrust API
-    Reference](https://docs.api.utrust.com).
+    For more details, check the [xMoney API
+    Reference](https://docs.api.crypto.xmoney.com).
 
 paths: false
