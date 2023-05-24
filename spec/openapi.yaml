@@ -81,14 +81,26 @@ info:
     Choose the xMoney payment method.
     Once you proceed to the payment, you will see xMoney Payment Widget.
 
+    Confirm prefilled email or fill in the one you want to use.
+
     ![xMoney_payment_widget_email_constent](widget/01–widget–email_consent.png)
-    ![xMoney_payment_widget_on_sandbox_store](widget/02–widget–method.png)
 
-    Select the EGLD currency. The widget will then show you a QR Code with the
-    payment details. Change to the Manual tab, and copy the
-    address and amount.
+     Select Pay with another wallet
+    
+    ![xMoney_payment_widget_method_selection](widget/02–widget–method.png)
+    
+    Select the EGLD (MultiversX) currency
+    
+    ![xMoney_payment_widget_currency_selection](widget/03-widget-currency-selection.png)
+    
+    Select MultiversX network.
+   
+    ![xMoney_payment_widget_network_selection](widget/04-widget-chain-selection.png)
 
-    ![xMoney_payment_widget_awaiting](https://user-images.githubusercontent.com/1558992/149549343-d26a27a2-7dd1-4d1e-b8fe-c3f7cf3d880a.png)
+    The widget will then show you a QR Code with the
+    payment details. Copy the address and amount.
+
+    ![xMoney_payment_widget_qr-code](widget/05-widget-qr-code.png)
 
     Open Elrond wallet and send the amount in xEGLD to the provided address.
 
@@ -97,7 +109,7 @@ info:
     Wait some seconds, and the widget should change to show the payment is
     complete.
 
-    ![xMoney_payment_widget_completed](https://user-images.githubusercontent.com/1558992/149550262-51546312-29db-4b29-a65a-0a56d5a1dbce.png)
+    ![xMoney_payment_widget_completed](widget/06–widget–wuccess.png)
 
     For EGLD, the payment is complete because transactions are confirmed very
     fast. For other cryptocurrencies, it can take some minutes to confirm. Either
