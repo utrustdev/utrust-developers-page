@@ -134,6 +134,11 @@ info:
     that Production uses blockchains mainnets, and Sandbox uses the respective
     testnets.
 
+    However, please note that some currencies may not available in Sandbox
+    due to the unavailability of their testnets. For example,
+    Lightning Network cannot be used to test Bitcoin transfers in Sandbox,
+    but is always available for testing in Production.
+
     We also release new features to Sandbox a bit before them reaching
     Production, but this usually happens in a couple of hours.
 
@@ -186,21 +191,21 @@ info:
     ## 4. Checkout suggestions (Depricated)
 
     To increase conversions on the checkout page, we suggest you to add the following:
-    - **Payment method name**: “Pay with Crypto” or “Utrust — Pay with Cryptocurrencies” (if it’s not possible to add the Utrust logo)
+    - **Payment method name**: “Pay with Crypto” or xMoney — Pay with Cryptocurrencies” (if it’s not possible to add the xMoney logo)
 
-      Have in mind the correct way to spell "Utrust":
+      Have in mind the correct way to spell "xMoney":
 
-      <img alt="How to write Utrust" style="max-width: 350px" src="https://user-images.githubusercontent.com/1558992/133260896-9fdce2c2-c997-4cac-8d99-ca673cd1c9c4.png" />
-    - **Description/Instructions**: “You will be redirected to the Utrust payment widget compatible with any major crypto wallets. It will allow you to pay for your purchase in a safe and seamless way using Bitcoin, Ethereum, Tether or a number of other currencies. [What is Utrust?](https://utrust.com/)”
-    - **Utrust checkout logo**: Download the logos [here](https://drive.google.com/file/d/1j25uOPfZv5iBzNShpgwbaDZBG51GGQBJ/view?usp=sharing).
+      <img alt="How to write xMoney" style="max-width: 350px" src="spelling.png" />
+    - **Description/Instructions**: “You will be redirected to the xMoney payment widget compatible with any major crypto wallets. It will allow you to pay for your purchase in a safe and seamless way using Bitcoin, Ethereum, Tether or a number of other currencies. [What is xMoney?](https://xmoney.com/)”
+    - **xMoney checkout logo**: Download the logos [here](https://drive.google.com/file/d/1j25uOPfZv5iBzNShpgwbaDZBG51GGQBJ/view?usp=sharing).
 
-    Example with the Utrust logo:
+    Example with the xMoney logo:
 
-    <img alt="Checkout with Utrust logo" style="max-width: 500px" src="https://user-images.githubusercontent.com/1558992/137111247-4921c13c-cd2d-4a7a-852b-18cef41221a0.png" />
+    <img alt="Checkout with xMoney logo" style="max-width: 500px" src="checkout-logo.png" />
 
-    Example without the Utrust logo:
+    Example without the xMoney logo:
 
-    <img alt="Checkout without Utrust logo" style="max-width: 500px" src="https://user-images.githubusercontent.com/1558992/137112194-0556544f-1ff9-4c65-9c91-72d8e6fcb3ff.png" />
+    <img alt="Checkout without xMoney logo" style="max-width: 500px" src="checkout-no_logo.png" />
 
 
     ## 5. Webhooks
