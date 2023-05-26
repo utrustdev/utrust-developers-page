@@ -20,14 +20,14 @@ info:
 
     Be aware xMoney Payments have the following limitations:
 
-    > ⏰ Our payment confirmation can take **up to 2h30**;
+    > ⏰ Our payment confirmation can take **up to 2h**;
 
     > 🌍 Our Payment Widget is only available in **English**.
 
 
     ## 1. Checkout process
 
-    Our payment flow is **asynchronous**; the customer has 15 minutes to choose
+    Our payment flow is **asynchronous**; the customer chooses
     the cryptocurrency and issue a transaction in the respective blockchain,
     sending the requested funds to the address we provided.
 
@@ -36,7 +36,7 @@ info:
     success callback URL.
 
     Upon confirmation of the transaction, which can take up to 2 hours, we send
-    a notification to the merchant store or website via a [webhook](#section/Basics/4.-Webhook).
+    a notification to the merchant store or website via a [webhook](#section/Basics/5.-Webhooks).
 
     In more detail, this flow has 6 stages:
 
@@ -114,7 +114,7 @@ info:
     For EGLD, the payment is complete because transactions are confirmed very
     fast. For other cryptocurrencies, it can take some minutes to confirm. Either
     way, the confirmation notification will we delivered to the merchant server,
-    via [webhook](#section/Basics/4.-Webhook).
+    via [webhook](#section/Basics/5.-Webhooks).
 
 
     ## 3. Build the order
@@ -125,10 +125,9 @@ info:
 
     ### 3.1. Sandbox and Production
 
-    In addition to the real-world payment processing environment, xMoney offers
+    In addition to the real-world payment processing environment - Production, xMoney offers
     developers an environment where they can test their integration using
-    not-so-valuable test money. We call these environments Production and
-    Sandbox, respectively.
+    not-so-valuable test money. We call this environment Sandbox.
 
     The two environments are identical for most of the time, differing only in
     that Production uses blockchains mainnets, and Sandbox uses the respective
