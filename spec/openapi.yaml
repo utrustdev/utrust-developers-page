@@ -71,7 +71,7 @@ info:
     If that faucet is not working, you can try [this one](https://r3d4.fr/faucet) (don't forget to choose Devnet,
     as for Elrond, it is the network we use for testing).
 
-    ![Elrond_devnet_wallet](https://user-images.githubusercontent.com/1558992/149547677-b38aa7cd-f76a-48a7-9d9a-6c3dfa755915.png)
+    ![Elrond_devnet_wallet](1_egld.png)
 
     You can also use [MetaMask](https://metamask.io/) with some fake ETH, just make sure to change to the Göerli Test Network, which
     is what we use in our sandbox environment.
@@ -104,7 +104,7 @@ info:
 
     Open Elrond wallet and send the amount in xEGLD to the provided address.
 
-    ![Elrond_wallet_filled](https://user-images.githubusercontent.com/1558992/149549605-b1c90744-1685-46ae-8c46-f7a4263aaeff.png)
+    ![Elrond_wallet_filled](2_egld.png)
 
     Wait some seconds, and the widget should change to show the payment is
     complete.
