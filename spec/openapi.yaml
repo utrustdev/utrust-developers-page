@@ -64,12 +64,12 @@ info:
     ## 2. Try our flow
 
     The best way to learn about what we do is by trying it out yourself. For
-    this, we recommend you to use [Elrond devnet wallet](https://devnet-wallet.elrond.com/)
+    this, we recommend you to use [MultiversX Devnet wallet](https://devnet-wallet.multiversx.com/unlock/)
     with some "fake" EGLD (notice Devnet instead of Testnet).
-    After creating your wallet, go to "Faucet" and click "Request tokens". This
-    should get you 10 xEGLD (which is the fake EGLD you will need).
+    After creating your wallet, on the right menu, find section "Sign Message". Below, click on "Faucet".
+    Then click "Request tokens". This should get you 30 xEGLD (which is the fake EGLD you will need to test in Devnet).
     If that faucet is not working, you can try [this one](https://r3d4.fr/faucet) (don't forget to choose Devnet,
-    as for Elrond, it is the network we use for testing).
+    as for MultiversX, it is the network we use for testing).
 
     ![Elrond_devnet_wallet](1_egld.png)
 
@@ -86,15 +86,15 @@ info:
     ![xMoney_payment_widget_email_constent](widget/01–widget–email_consent.png)
 
      Select Pay with another wallet.
-    
+
     ![xMoney_payment_widget_method_selection](widget/02–widget–method.png)
-    
+
     Select the EGLD (MultiversX) currency.
-    
+
     ![xMoney_payment_widget_currency_selection](widget/03-widget-currency-selection.png)
-    
+
     Select MultiversX network.
-   
+
     ![xMoney_payment_widget_network_selection](widget/04-widget-chain-selection.png)
 
     The widget will then show you a QR Code with the
