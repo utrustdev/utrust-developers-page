@@ -288,7 +288,7 @@ info:
             OpenCart 3
           </td>
           <td>
-            <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40369&filter_search=utrust&filter_license=0">
+            <a href="https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=40369">
               OpenCart marketplace
             </a>
             or
@@ -381,7 +381,7 @@ info:
 
     **Is your platform missing from this list?**
 
-    <a href="mailto:integrations@utrust.com?subject=Missing platform integration">Let us know</a> so we can consider it in our
+    <a href="mailto:integrations@xmoney.com?subject=Missing platform integration">Let us know</a> so we can consider it in our
     development roadmap.
 
     Alternatively, use our [API documentation](https://docs.api.crypto.xmoney.com/) to
@@ -428,7 +428,7 @@ info:
 
     **Is your language missing from this list?**
 
-    <a href="mailto:integrations@utrust.com?subject=Missing language library">Let us
+    <a href="mailto:integrations@xmoney.com?subject=Missing language library">Let us
     know</a> so we can consider it in our development roadmap.
 
     Alternatively, use our [API documentation](https://docs.api.crypto.xmoney.com/) to
