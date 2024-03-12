@@ -65,9 +65,9 @@ info:
 
     The best way to learn about what we do is by trying it out yourself. For
     this, we recommend you to use [MultiversX Devnet wallet](https://devnet-wallet.multiversx.com/unlock/).
-    To use it, you will get Devnet funds or some "fake" EGLD (notice Devnet instead of Testnet).
-    After creating your wallet, on the right menu, find section "Sign Message". Below, click on "Faucet".
-    Then click "Request tokens". This should get you 30 xEGLD (which is the fake EGLD you will need to test in Devnet).
+    To use it, you will need to get Devnet funds (or "fake" EGLD, notice Devnet instead of Testnet).
+    After creating your wallet, on the left menu, find section "Tools". Below, click on "Faucet".
+    Then click "Request tokens". This should get you 5 xEGLD (which is the "fake" EGLD you will need to test in Devnet).
     If that faucet is not working, you can try [this one](https://r3d4.fr/faucet) (don't forget to choose Devnet,
     as for MultiversX, it is the network we use for testing).
 
