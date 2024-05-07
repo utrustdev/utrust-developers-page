@@ -65,18 +65,18 @@ info:
 
     The best way to learn about what we do is by trying it out yourself. For
     this, we recommend you to use [MultiversX Devnet wallet](https://devnet-wallet.multiversx.com/unlock/).
-    To use it, you will need to get Devnet funds (or "fake" EGLD, notice Devnet instead of Testnet).
-    After creating your wallet, on the left menu, find section "Tools". Below, click on "Faucet".
-    Then click "Request tokens". This should get you 5 xEGLD (which is the "fake" EGLD you will need to test in Devnet).
+    To use it, you will get Devnet funds or some "fake" EGLD (notice Devnet instead of Testnet).
+    After creating your wallet, on the left menu, under the section "Tools", click in the "Faucet" option.
+    Then click "Request tokens". This should get you 5 xEGLD (which is the fake EGLD you will need to test in Devnet).
     If that faucet is not working, you can try [this one](https://r3d4.fr/faucet) (don't forget to choose Devnet,
     as for MultiversX, it is the network we use for testing).
 
     ![Elrond_devnet_wallet](1_egld.png)
 
-    You can also use [MetaMask](https://metamask.io/) with some fake ETH, just make sure to change to the Sepolia Testnet, which
+    You can also use [MetaMask](https://metamask.io/) with some fake ETH, just make sure to change to the Göerli Test Network, which
     is what we use in our sandbox environment.
 
-    When you are ready, go to our [Sandbox online store](https://demo.store.utrust.com/)
+    When you are ready, go to our [Sandbox online store](https://sandbox.store.crypto.xmoney.com)
     and give it a spin by selecting an item and proceeding to checkout.
     Choose the xMoney payment method.
     Once you proceed to the payment, you will see xMoney Payment Widget.
@@ -367,11 +367,11 @@ info:
             WooCommerce
           </td>
           <td>
-            <a href="https://wordpress.org/plugins/utrust-for-woocommerce/">
+            <a href="https://github.com/utrustdev/xMoney-Crypto-for-WooCommerce/">
               Wordpress marketplace
             </a>
             or
-            <a href="https://github.com/utrustdev/utrust-for-woocommerce">
+            <a href="https://github.com/utrustdev/xMoney-Crypto-for-WooCommerce">
               Download
             </a>
           </td>
