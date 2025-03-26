@@ -227,7 +227,7 @@ info:
 
     All requests sent by xMoney to the provided URL are signed for validation
     using the `Webhooks Secret` generated (see [3.3
-    Authetication](#33-authentication)).
+    Authentication](#33-authentication)).
 
     When using our [integrations](#section/Integrations), webhooks are set and
     validated automatically as part of the order payment flow. For custom
